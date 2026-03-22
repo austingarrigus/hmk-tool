@@ -1,0 +1,7 @@
+name = "¾-Helm"
+material = "Plate"
+covers = [
+    "Skull",
+    "Face",
+]
+description = "A steel helmet extending to cover the face with a visor or face guard, providing substantially greater protection than an open helm at the cost of reduced visibility and ventilation."

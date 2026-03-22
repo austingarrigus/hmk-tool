@@ -1,0 +1,14 @@
+name = "Longknife"
+group = "Knives"
+restriction = "Simple"
+quality = 13
+heft = 7
+length = 4
+thrusting = true
+aspect = "Point"
+zone_die = 6
+impact_die = 8
+impact_mod = 3
+weight = 2
+price = 96
+description = "(Vagorsereq) Available only to Ælrhin, the longknife has a sharp double-edged blade (lng 4 • d10 + 2e) but is designed primarily for thrusting. An elf-smith's innate Faeriecraft might also give it the melee +5 trait (page 93)."

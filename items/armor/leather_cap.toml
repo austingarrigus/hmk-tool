@@ -1,0 +1,6 @@
+name = "Cap"
+material = "Leather"
+covers = [
+    "Skull"
+]
+description = "A fitted leather cap providing modest protection to the skull, worn by scouts, hunters, and light infantry."

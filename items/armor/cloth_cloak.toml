@@ -1,0 +1,6 @@
+name = "Cloak"
+material = "Cloth"
+covers = [
+    "Shoulder",
+]
+description = "A broad cloth garment fastened at the shoulder, draped over the body for warmth and weather protection during travel."

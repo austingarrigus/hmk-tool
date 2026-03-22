@@ -1,0 +1,14 @@
+name = "Falcastra"
+group = "Polearms"
+restriction = "Common"
+quality = 9
+heft = 18
+length = 7
+thrusting = false
+aspect = "Point"
+zone_die = 8
+impact_die = 8
+impact_mod = 4
+weight = 6
+price = 42
+description = "A weapon developed from attaching a scythe blade to a shaft at a right angle. Most are lesser-quality peasant-rigged weapons."

@@ -1,0 +1,7 @@
+name = "Cowl"
+material = "Scale"
+covers = [
+    "Skull",
+    "Neck",
+]
+description = "A hood of overlapping metal scales riveted to a leather backing, covering the skull and neck. The flexible construction conforms to the head while providing reliable protection."

@@ -1,0 +1,12 @@
+name = "Tunic, sleeved"
+material = "Padded"
+covers = [
+    "Shoulder",
+    "UpperArm",
+    "Elbow",
+    "Forearm",
+    "Thorax",
+    "Abdomen",
+    "Pelvis",
+]
+description = "A full-sleeved padded tunic providing arm protection down to the wrists, worn beneath mail hauberks or as standalone armor."

@@ -1,0 +1,7 @@
+name = "Vest"
+material = "Leather"
+covers = [
+    "Thorax",
+    "Abdomen",
+]
+description = "A leather torso garment covering chest and abdomen, commonly worn by rangers, scouts, and those who favor mobility over heavy protection."

@@ -1,0 +1,14 @@
+name = "Falchion"
+group = "Swords"
+restriction = "Chivalric"
+quality = 12
+heft = 12
+length = 4
+thrusting = false
+aspect = "Edge"
+zone_die = 6
+impact_die = 8
+impact_mod = 4
+weight = 3
+price = 120
+description = "The design of the falchion's blade calls for chopping strikes. It shares elements of a sword's control, but with its weight centred further out on the blade, the falchion imparts a higher effective heft than a broadsword of similar weight."

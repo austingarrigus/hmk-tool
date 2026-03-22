@@ -1,0 +1,10 @@
+name = "120lb Wooden Crossbow"
+group = "Crossbows"
+restriction = "Common"
+quality = 10
+draw = 120
+base_range = 210
+impact_mod = 2
+weight = 4
+price = 84
+description = "(Hunting crossbow) Light-draw versions are not uncommon hunting weapons. The archer's ability to hold and aim shots grants an advantage in stalking game."

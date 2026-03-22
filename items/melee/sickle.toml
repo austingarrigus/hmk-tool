@@ -1,0 +1,14 @@
+name = "Sickle"
+group = "Axes"
+restriction = "Common"
+quality = 9
+heft = 9
+length = 3
+thrusting = false
+aspect = "Edge"
+zone_die = 6
+impact_die = 10
+impact_mod = 2
+weight = 2
+price = 10
+description = "(Reap hook) An agricultural tool used for harvesting, reaping, and cutting. The curving blade in the style shown here helps catch and slice crops at the same time."

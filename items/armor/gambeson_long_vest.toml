@@ -1,0 +1,10 @@
+name = "Long Vest"
+material = "Gambeson"
+covers = [
+    "Neck",
+    "Shoulder",
+    "Thorax",
+    "Abdomen",
+    "Pelvis",
+]
+description = "A sleeveless gambeson extending from neck to hips, offering substantial trunk protection while leaving the arms free for unhindered weapon handling."

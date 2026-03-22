@@ -1,0 +1,91 @@
+name = "Trivis"
+action_base = 6
+injuries = []
+
+[skills]
+Intrigue = 4
+Physician = 3
+Survival = 5
+Throwing = 6
+
+[mh_weapon]
+name = "Shortsword"
+group = "Swords"
+restriction = "Chivalric"
+quality = 12
+heft = 10
+length = 5
+thrusting = false
+aspect = "Edge"
+zone_die = 6
+impact_die = 10
+impact_mod = 2
+weight = 3
+price = 156
+description = "(Arming sword • War sword) The most popular weapon of the feudal gentry, the broadsword allows for a high degree of control. This is a lethal advantage against all defences but mail and plate, which routinely turn its slicing blows."
+
+[rg_weapon]
+name = "100lb Longbow"
+group = "Bows"
+restriction = "Simple"
+quality = 10
+draw = 100
+base_range = 210
+impact_mod = 3
+weight = 3
+price = 54
+description = "(Self bow) A bow made of a single-piece wooden stave; can be used as a fragile club (lng 5 • zd d8 • d6 + 0b • WQ reduced by five in Weapon Damage Rolls)."
+
+[ammo]
+shaft = "Light"
+head = "Broad"
+
+[[armor]]
+name = "Cap"
+material = "Padded"
+covers = [
+    "Skull",
+]
+description = "A thickly padded cap worn beneath helms to cushion blows, or alone as modest head protection for those who cannot afford metal."
+
+[[armor]]
+name = "Tunic"
+material = "Padded"
+covers = [
+    "Shoulder",
+    "UpperArm",
+    "Elbow",
+    "Thorax",
+    "Abdomen",
+    "Pelvis",
+]
+description = "A padded garment extending from shoulders to hips with half-sleeves, frequently worn as the primary armor of militia and levy troops."
+
+[[armor]]
+name = "Trousers"
+material = "Cloth"
+covers = [
+    "Pelvis",
+    "Thigh",
+    "Knee",
+    "Calf",
+]
+description = "Full-length cloth leg coverings from waist to ankle, worn in colder regions or by those preferring greater coverage."
+
+[[armor]]
+name = "Swaddle"
+material = "Cloth"
+covers = [
+    "Calf",
+    "Foot",
+]
+description = "Strips of cloth wrapped around the lower legs and feet, commonly used by peasants and soldiers in place of proper footwear."
+
+[[armor]]
+name = "Boots"
+material = "Leather"
+covers = [
+    "Calf",
+    "Foot",
+]
+description = "Sturdy leather footwear rising to mid-calf, essential gear for soldiers, travelers, and anyone who regularly traverses rough terrain."

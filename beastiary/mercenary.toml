@@ -1,0 +1,111 @@
+name = "Mercenary"
+action_base = 6
+injuries = []
+
+[skills]
+Intrigue = 4
+Physician = 3
+Survival = 5
+Throwing = 6
+
+[mh_weapon]
+name = "Broadsword"
+group = "Swords"
+restriction = "Chivalric"
+quality = 12
+heft = 10
+length = 5
+thrusting = false
+aspect = "Edge"
+zone_die = 6
+impact_die = 10
+impact_mod = 3
+weight = 3
+price = 156
+description = "(Arming sword • War sword) The most popular weapon of the feudal gentry, the broadsword allows for a high degree of control. This is a lethal advantage against all defences but mail and plate, which routinely turn its slicing blows."
+
+[oh_weapon]
+name = "Roundshield"
+group = "Shields"
+restriction = "Simple"
+quality = 10
+heft = 10
+length = 1
+thrusting = false
+aspect = "Blunt"
+zone_die = 6
+impact_die = 6
+impact_mod = 1
+deflect = 3
+weight = 6
+price = 48
+description = "A medium shield that, along with a sturdy helm, is the core element of defence."
+
+[[armor]]
+name = "Helm"
+material = "Plate"
+covers = [
+    "Skull",
+]
+description = "A steel helmet protecting the skull, typically fitted with a padded liner and chin strap. The simplest form of plate head protection."
+
+[[armor]]
+name = "Cap"
+material = "Padded"
+covers = [
+    "Skull",
+]
+description = "A thickly padded cap worn beneath helms to cushion blows, or alone as modest head protection for those who cannot afford metal."
+
+[[armor]]
+name = "Byrnie"
+material = "Mail"
+covers = [
+    "Shoulder",
+    "UpperArm",
+    "Thorax",
+    "Abdomen",
+]
+description = "A short-sleeved mail shirt covering the torso and upper arms, the standard armor of professional soldiers across Kethira. Its interlocked rings provide superior defense against slashing weapons."
+
+[[armor]]
+name = "Tunic"
+material = "Padded"
+covers = [
+    "Shoulder",
+    "UpperArm",
+    "Elbow",
+    "Thorax",
+    "Abdomen",
+    "Pelvis",
+]
+description = "A padded garment extending from shoulders to hips with half-sleeves, frequently worn as the primary armor of militia and levy troops."
+
+[[armor]]
+name = "Trousers"
+material = "Cloth"
+covers = [
+    "Pelvis",
+    "Thigh",
+    "Knee",
+    "Calf",
+]
+description = "Full-length cloth leg coverings from waist to ankle, worn in colder regions or by those preferring greater coverage."
+
+[[armor]]
+name = "Swaddle"
+material = "Cloth"
+covers = [
+    "Calf",
+    "Foot",
+]
+description = "Strips of cloth wrapped around the lower legs and feet, commonly used by peasants and soldiers in place of proper footwear."
+
+[[armor]]
+name = "Boots"
+material = "Leather"
+covers = [
+    "Calf",
+    "Foot",
+]
+description = "Sturdy leather footwear rising to mid-calf, essential gear for soldiers, travelers, and anyone who regularly traverses rough terrain."

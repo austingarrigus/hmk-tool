@@ -1,0 +1,9 @@
+name = "Byrnie"
+material = "Mail"
+covers = [
+    "Shoulder",
+    "UpperArm",
+    "Thorax",
+    "Abdomen",
+]
+description = "A short-sleeved mail shirt covering the torso and upper arms, the standard armor of professional soldiers across Kethira. Its interlocked rings provide superior defense against slashing weapons."

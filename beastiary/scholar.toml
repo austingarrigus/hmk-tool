@@ -1,0 +1,64 @@
+name = "Scholar"
+action_base = 3
+injuries = []
+
+[skills]
+Folklore = 7
+Script = 4
+
+[mh_weapon]
+name = "Knife"
+group = "Knives"
+restriction = "Common"
+quality = 10
+heft = 6
+length = 2
+thrusting = true
+aspect = "Point"
+zone_die = 6
+impact_die = 8
+impact_mod = 1
+weight = 1
+price = 6
+description = "(Hunting knife) A utilitarian blade, also with a sharp edge (lng 2 • d10 + 0e)."
+
+[[armor]]
+name = "Vest"
+material = "Cloth"
+covers = [
+    "Thorax",
+    "Abdomen",
+]
+description = "A sleeveless cloth garment covering the chest and abdomen, commonly worn as an undergarment or light outer layer."
+
+[[armor]]
+name = "Tunic"
+material = "Cloth"
+covers = [
+    "Shoulder",
+    "UpperArm",
+    "Elbow",
+    "Thorax",
+    "Abdomen",
+    "Pelvis",
+]
+description = "A knee-length cloth garment extending from the shoulders to the thighs, belted at the waist and worn by commoners and nobles alike."
+
+[[armor]]
+name = "Breeches"
+material = "Cloth"
+covers = [
+    "Pelvis",
+    "Thigh",
+    "Knee",
+]
+description = "Short cloth leg coverings extending from the waist to just below the knee, the standard lower garment for working folk."
+
+[[armor]]
+name = "Swaddle"
+material = "Cloth"
+covers = [
+    "Calf",
+    "Foot",
+]
+description = "Strips of cloth wrapped around the lower legs and feet, commonly used by peasants and soldiers in place of proper footwear."

@@ -1,0 +1,97 @@
+name = "Mercantyler"
+action_base = 4
+injuries = []
+
+[skills]
+Guile = 6
+Intrigue = 7
+Mercantilism = 7
+
+[mh_weapon]
+name = "Shortsword"
+group = "Swords"
+restriction = "Simple"
+quality = 12
+heft = 8
+length = 4
+thrusting = false
+aspect = "Edge"
+zone_die = 6
+impact_die = 10
+impact_mod = 2
+weight = 2
+price = 96
+description = "(Sword) Carried by many common folk, the shortsword primarily calls for cutting strikes. Its shorter length turns to an advantage in tight quarters against foes wielding spears and longer swords."
+
+[[armor]]
+name = "Cap"
+material = "Leather"
+covers = [
+    "Skull",
+]
+description = "A fitted leather cap providing modest protection to the skull, worn by scouts, hunters, and light infantry."
+
+[[armor]]
+name = "Shirt"
+material = "Padded"
+covers = [
+    "Shoulder",
+    "UpperArm",
+    "Thorax",
+    "Abdomen",
+]
+description = "A padded garment covering the torso and upper arms, the standard foundation layer for soldiers donning heavier armor."
+
+[[armor]]
+name = "Tunic, sleeved"
+material = "Cloth"
+covers = [
+    "Shoulder",
+    "UpperArm",
+    "Elbow",
+    "Forearm",
+    "Thorax",
+    "Abdomen",
+    "Pelvis",
+]
+description = "A full-sleeved tunic providing coverage from shoulder to wrist and down to the thighs, favored in colder climates."
+
+[[armor]]
+name = "Surcoat"
+material = "Cloth"
+covers = [
+    "Shoulder",
+    "Thorax",
+    "Abdomen",
+    "Pelvis",
+    "Thigh",
+    "Knee",
+]
+description = "A sleeveless outer garment worn over armor or other clothing, often displaying heraldic devices or guild insignia."
+
+[[armor]]
+name = "Breeches"
+material = "Cloth"
+covers = [
+    "Pelvis",
+    "Thigh",
+    "Knee",
+]
+description = "Short cloth leg coverings extending from the waist to just below the knee, the standard lower garment for working folk."
+
+[[armor]]
+name = "Swaddle"
+material = "Cloth"
+covers = [
+    "Calf",
+    "Foot",
+]
+description = "Strips of cloth wrapped around the lower legs and feet, commonly used by peasants and soldiers in place of proper footwear."
+
+[[armor]]
+name = "Shoes"
+material = "Leather"
+covers = [
+    "Foot",
+]
+description = "Low leather footwear covering the foot, the everyday choice for townsfolk and those not expecting rough travel."

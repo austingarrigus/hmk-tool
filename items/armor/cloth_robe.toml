@@ -1,0 +1,15 @@
+name = "Robe"
+material = "Cloth"
+covers = [
+    "Shoulder",
+    "UpperArm",
+    "Elbow",
+    "Forearm",
+    "Thorax",
+    "Abdomen",
+    "Pelvis",
+    "Thigh",
+    "Knee",
+    "Calf",
+]
+description = "A full-length sleeved garment reaching to the ankles, associated with scholars, priests, and those of clerical station."

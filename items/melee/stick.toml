@@ -1,0 +1,14 @@
+name = "Stick"
+group = "Clubs"
+restriction = "Common"
+quality = 8
+heft = 9
+length = 3
+thrusting = false
+aspect = "Blunt"
+zone_die = 6
+impact_die = 6
+impact_mod = 0
+weight = 1
+price = 6
+description = "(Baton) A smaller club for close-quarter fighting. Treat torches as sticks when used to strike (see page 121 sidebar about targeting someone with a flaming torch)."

@@ -1,0 +1,11 @@
+name = "Surcoat"
+material = "Cloth"
+covers = [
+    "Shoulder",
+    "Thorax",
+    "Abdomen",
+    "Pelvis",
+    "Thigh",
+    "Knee",
+]
+description = "A sleeveless outer garment worn over armor or other clothing, often displaying heraldic devices or guild insignia."

@@ -1,0 +1,14 @@
+name = "Tabûri"
+group = "Knives"
+restriction = "Simple"
+quality = 10
+heft = 7
+length = 2
+thrusting = true
+aspect = "Point"
+zone_die = 6
+impact_die = 8
+impact_mod = 2
+weight = 1
+price = 20
+description = "(Throwing knife) A pointed knife balanced and sharpened for throwing."

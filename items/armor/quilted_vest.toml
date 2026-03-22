@@ -1,0 +1,7 @@
+name = "Vest"
+material = "Quilted"
+covers = [
+    "Thorax",
+    "Abdomen",
+]
+description = "A quilted torso garment of stitched layered fabric, commonly worn by urban watchmen and merchants who desire inconspicuous protection."

@@ -1,0 +1,13 @@
+name = "Coat"
+material = "Padded"
+covers = [
+    "Shoulder",
+    "UpperArm",
+    "Elbow",
+    "Forearm",
+    "Thorax",
+    "Abdomen",
+    "Pelvis",
+    "Thigh",
+]
+description = "A long padded garment with full sleeves, offering extensive coverage as a foundation for heavy armor or as primary protection for sergeants and men-at-arms."

@@ -1,0 +1,124 @@
+name = "Knight"
+action_base = 7
+injuries = []
+
+[skills]
+Command = 5
+Heraldry = 4
+Riding = 7
+Throwing = 6
+
+[mh_weapon]
+name = "Bastard Sword"
+group = "Swords"
+restriction = "Chivalric"
+quality = 12
+heft = 14
+length = 5
+thrusting = false
+aspect = "Edge"
+zone_die = 6
+impact_die = 10
+impact_mod = 4
+weight = 5
+price = 184
+description = "(Knight's sword · Hand-and-a-half sword) A large sword that enables strong combatants to wield it readily either one-handed (lng 6) or two-handed (lng 5)."
+
+[oh_weapon]
+name = "Knight's Shield"
+group = "Shields"
+restriction = "Chivalric"
+quality = 11
+heft = 10
+length = 1
+thrusting = false
+aspect = "Blunt"
+zone_die = 6
+impact_die = 6
+impact_mod = 1
+deflect = 3
+weight = 5
+price = 60
+description = "A medium shield often emblazoned with a coat of arms or its colours."
+
+[[armor]]
+name = "Helm"
+material = "Plate"
+covers = [
+    "Skull"
+]
+description = "A steel helmet protecting the skull, typically fitted with a padded liner and chin strap. The simplest form of plate head protection."
+
+[[armor]]
+name = "Cap"
+material = "Padded"
+covers = [
+    "Skull"
+]
+description = "A thickly padded cap worn beneath helms to cushion blows, or alone as modest head protection for those who cannot afford metal."
+
+[[armor]]
+name = "Habergeon"
+material = "Mail"
+covers = [
+    "Shoulder",
+    "UpperArm",
+    "Elbow",
+    "Thorax",
+    "Abdomen",
+    "Pelvis",
+]
+description = "A half-sleeved mail garment extending below the waist to the hips, offering more coverage than a byrnie while remaining lighter than a full hauberk."
+
+[[armor]]
+name = "Coat"
+material = "Padded"
+covers = [
+    "Shoulder",
+    "UpperArm",
+    "Elbow",
+    "Forearm",
+    "Thorax",
+    "Abdomen",
+    "Pelvis",
+    "Thigh",
+]
+description = "A long padded garment with full sleeves, offering extensive coverage as a foundation for heavy armor or as primary protection for sergeants and men-at-arms."
+
+[[armor]]
+name = "Breeches"
+material = "Cloth"
+covers = [
+    "Pelvis",
+    "Thigh",
+    "Knee",
+]
+description = "Short cloth leg coverings extending from the waist to just below the knee, the standard lower garment for working folk."
+
+[[armor]]
+name = "Kneecops"
+material = "Kurbul"
+covers = [
+    "Knee"
+]
+description = "Rigid kurbul knee guards strapped over padded cuisses, protecting the joint from disabling strikes."
+
+[[armor]]
+name = "Leggings"
+material = "Padded"
+covers = [
+    "Thigh",
+    "Knee",
+    "Calf",
+    "Foot",
+]
+description = "Padded leg coverings from thigh to foot, providing warmth and cushioning for those marching or standing guard in cold conditions."
+
+[[armor]]
+name = "Boots"
+material = "Leather"
+covers = [
+    "Calf",
+    "Foot",
+]
+description = "Sturdy leather footwear rising to mid-calf, essential gear for soldiers, travelers, and anyone who regularly traverses rough terrain."

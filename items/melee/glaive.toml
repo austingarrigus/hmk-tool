@@ -1,0 +1,14 @@
+name = "Glaive"
+group = "Polearms"
+restriction = "Simple"
+quality = 11
+heft = 18
+length = 7
+thrusting = false
+aspect = "Edge"
+zone_die = 8
+impact_die = 10
+impact_mod = 4
+weight = 6
+price = 60
+description = "A long-shafted weapon with a bladed end, used primarily for cutting strikes but can also be thrust with its pointed tip (lng 7t • d8 + 3p)."

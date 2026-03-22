@@ -1,0 +1,6 @@
+name = "Spaulders"
+material = "Kurbul"
+covers = [
+    "Shoulder"
+]
+description = "Kurbul shoulder guards shaped to deflect blows from the upper arms, often flared to shed strikes away from the neck."

@@ -1,0 +1,11 @@
+name = "Surcoat"
+material = "Padded"
+covers = [
+    "Shoulder",
+    "Thorax",
+    "Abdomen",
+    "Pelvis",
+    "Thigh",
+    "Knee",
+]
+description = "A sleeveless padded garment extending below the waist, designed to be worn over mail to provide additional cushioning and display heraldic devices."

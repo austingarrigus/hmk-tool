@@ -1,0 +1,7 @@
+name = "Boots"
+material = "Leather"
+covers = [
+    "Calf",
+    "Foot",
+]
+description = "Sturdy leather footwear rising to mid-calf, essential gear for soldiers, travelers, and anyone who regularly traverses rough terrain."

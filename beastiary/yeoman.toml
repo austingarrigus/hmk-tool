@@ -1,0 +1,114 @@
+name = "Yeoman"
+action_base = 6
+injuries = []
+
+[skills]
+Agriculture = 7
+Animalcraft = 6
+Survival = 5
+Weaponcraft = 3
+
+[mh_weapon]
+name = "Falchion"
+group = "Swords"
+restriction = "Chivalric"
+quality = 12
+heft = 12
+length = 4
+thrusting = false
+aspect = "Edge"
+zone_die = 6
+impact_die = 8
+impact_mod = 4
+weight = 3
+price = 120
+description = "The design of the falchion's blade calls for chopping strikes. It shares elements of a sword's control, but with its weight centred further out on the blade, the falchion imparts a higher effective heft than a broadsword of similar weight."
+
+[rg_weapon]
+name = "100lb Longbow"
+group = "Bows"
+restriction = "Simple"
+quality = 10
+draw = 100
+base_range = 210
+impact_mod = 3
+weight = 3
+price = 54
+description = "(Self bow) A bow made of a single-piece wooden stave; can be used as a fragile club (lng 5 • zd d8 • d6 + 0b • WQ reduced by five in Weapon Damage Rolls)."
+
+[ammo]
+shaft = "Heavy"
+head = "Bodkin"
+
+[[armor]]
+name = "Helm"
+material = "Kurbul"
+covers = [
+    "Skull"
+]
+description = "A helmet of kurbul, the hardened and lacquered leather unique to Harn, shaped over wooden forms and boiled until rigid. Lighter and less expensive than metal, though less protective."
+
+[[armor]]
+name = "Cap"
+material = "Padded"
+covers = [
+    "Skull"
+]
+description = "A thickly padded cap worn beneath helms to cushion blows, or alone as modest head protection for those who cannot afford metal."
+
+[[armor]]
+name = "Coat"
+material = "Quilted"
+covers = [
+    "Shoulder",
+    "UpperArm",
+    "Elbow",
+    "Forearm",
+    "Thorax",
+    "Abdomen",
+    "Pelvis",
+    "Thigh",
+]
+description = "A long quilted garment with full sleeves, the extensive stitching throughout creating a rigid yet flexible protective layer."
+
+[[armor]]
+name = "Tunic"
+material = "Cloth"
+covers = [
+    "Shoulder",
+    "UpperArm",
+    "Elbow",
+    "Thorax",
+    "Abdomen",
+    "Pelvis",
+]
+description = "A knee-length cloth garment extending from the shoulders to the thighs, belted at the waist and worn by commoners and nobles alike."
+
+[[armor]]
+name = "Breeches"
+material = "Cloth"
+covers = [
+    "Pelvis",
+    "Thigh",
+    "Knee",
+]
+description = "Short cloth leg coverings extending from the waist to just below the knee, the standard lower garment for working folk."
+
+[[armor]]
+name = "Leggings"
+material = "Cloth"
+covers = [
+    "Thigh",
+    "Knee",
+    "Calf",
+    "Foot",
+]
+description = "Fitted cloth coverings for the legs from thigh to foot, often worn beneath other garments for warmth."
+
+[[armor]]
+name = "Shoes"
+material = "Leather"
+covers = [
+    "Foot"
+]
+description = "Low leather footwear covering the foot, the everyday choice for townsfolk and those not expecting rough travel."

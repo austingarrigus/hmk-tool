@@ -1,0 +1,10 @@
+name = "125lb Longbow"
+group = "Bows"
+restriction = "Simple"
+quality = 11
+draw = 125
+base_range = 240
+impact_mod = 4
+weight = 3
+price = 63
+description = "(Self bow) A bow made of a single-piece wooden stave; can be used as a fragile club (lng 5 • zd d8 • d6 + 0b • WQ reduced by five in Weapon Damage Rolls)."

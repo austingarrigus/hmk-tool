@@ -1,0 +1,6 @@
+name = "Bracers"
+material = "Leather"
+covers = [
+    "Forearm"
+]
+description = "Leather forearm guards laced or buckled over the sleeve, used by archers to protect against bowstring snap and by swordsmen for parrying."

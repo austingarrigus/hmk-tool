@@ -1,0 +1,13 @@
+name = "Hauberk"
+material = "Scale"
+covers = [
+    "Shoulder",
+    "UpperArm",
+    "Elbow",
+    "Forearm",
+    "Thorax",
+    "Abdomen",
+    "Pelvis",
+    "Thigh",
+]
+description = "A full-length scale armor garment with long sleeves, covering from shoulders to thighs and providing extensive protection for heavy infantry and cavalry."

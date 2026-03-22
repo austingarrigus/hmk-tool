@@ -1,0 +1,14 @@
+name = "Mace"
+group = "Clubs"
+restriction = "Chivalric"
+quality = 12
+heft = 13
+length = 4
+thrusting = false
+aspect = "Blunt"
+zone_die = 6
+impact_die = 6
+impact_mod = 4
+weight = 4
+price = 108
+description = "The flanges on the head are not for puncturing armour but for helping land more solid strikes by minimizing glancing blows. Many maces have wooden shafts, reducing their price for a lower performance (wq 11 • hft 11 • d6 + 3b • 3 lb • 84d)."

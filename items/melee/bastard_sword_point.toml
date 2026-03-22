@@ -1,0 +1,14 @@
+name = "Bastard Sword"
+group = "Swords"
+restriction = "Chivalric"
+quality = 12
+heft = 14
+length = 5
+thrusting = true
+aspect = "Point"
+zone_die = 6
+impact_die = 8
+impact_mod = 2
+weight = 5
+price = 184
+description = "(Knight's sword · Hand-and-a-half sword) A large sword that enables strong combatants to wield it readily either one-handed (lng 6) or two-handed (lng 5)."

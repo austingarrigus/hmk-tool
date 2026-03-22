@@ -1,0 +1,7 @@
+name = "Vest"
+material = "Scale"
+covers = [
+    "Thorax",
+    "Abdomen",
+]
+description = "A sleeveless garment of overlapping metal scales on a leather backing, covering the chest and abdomen. Scale's overlapping construction sheds blows effectively but adds considerable weight."

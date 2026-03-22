@@ -1,0 +1,14 @@
+name = "Kéltan"
+group = "Knives"
+restriction = "Simple"
+quality = 12
+heft = 7
+length = 3
+thrusting = true
+aspect = "Point"
+zone_die = 6
+impact_die = 8
+impact_mod = 1
+weight = 2
+price = 36
+description = "(Parrying dagger) A dagger with an enlarged hand guard (lng 3 • d10 + 0e)."

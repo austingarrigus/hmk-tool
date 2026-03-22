@@ -1,0 +1,15 @@
+name = "Knight's Shield"
+group = "Shields"
+restriction = "Chivalric"
+quality = 11
+heft = 10
+length = 1
+thrusting = false
+aspect = "Blunt"
+zone_die = 6
+impact_die = 6
+impact_mod = 1
+deflect = 3
+weight = 5
+price = 60
+description = "A medium shield often emblazoned with a coat of arms or its colours."

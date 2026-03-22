@@ -1,0 +1,15 @@
+name = "Kite Shield"
+group = "Shields"
+restriction = "Chivalric"
+quality = 11
+heft = 11
+length = 1
+thrusting = false
+aspect = "Blunt"
+zone_die = 8
+impact_die = 6
+impact_mod = 1
+deflect = 4
+weight = 7
+price = 72
+description = "A large shield that gives nearly full-body protection, favoured by mounted warriors because its tapered end protects a leg."

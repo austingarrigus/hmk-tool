@@ -1,0 +1,14 @@
+name = "Battlesword"
+group = "Swords"
+restriction = "Chivalric"
+quality = 13
+heft = 18
+length = 6
+thrusting = true
+aspect = "Point"
+zone_die = 6
+impact_die = 8
+impact_mod = 2
+weight = 7
+price = 240
+description = "(Great sword • Long sword) A massive sword developed to overcome mail and batter plate defences, the uncommon battlesword can be wielded effectively in close-quarter fighting by a technique called half-swording (page 102)."

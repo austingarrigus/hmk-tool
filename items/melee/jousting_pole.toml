@@ -1,0 +1,14 @@
+name = "Jousting Pole"
+group = "Polearms"
+restriction = "Chivalric"
+quality = 8
+heft = 16
+length = 8
+thrusting = true
+aspect = "Blunt"
+zone_die = 8
+impact_die = 6
+impact_mod = 2
+weight = 6
+price = 40
+description = "A lance tipped with several blunted prongs rather than a single pointed blade. Such a head, used in tournaments, better catches hold of opposing shields (+2 impact for shield damage), and is less lethal should it strike the rider or horse."

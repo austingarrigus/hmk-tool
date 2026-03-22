@@ -1,0 +1,14 @@
+name = "Hatchet"
+group = "Axes"
+restriction = "Common"
+quality = 9
+heft = 10
+length = 4
+thrusting = false
+aspect = "Edge"
+zone_die = 6
+impact_die = 8
+impact_mod = 4
+weight = 3
+price = 6
+description = "(Small axe) A short tool used for cutting and splitting wood."

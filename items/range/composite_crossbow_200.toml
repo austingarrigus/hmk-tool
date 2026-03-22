@@ -1,0 +1,10 @@
+name = "200lb Composite Crossbow"
+group = "Crossbows"
+restriction = "Simple"
+quality = 11
+draw = 200
+base_range = 270
+impact_mod = 4
+weight = 7
+price = 144
+description = "(Siege crossbow) With a string as thick as a thumb and a composite wood and horn prod, the stout compound crossbow almost invariably requires a mechanical spanner. For this reason many are relegated to siege defence, where the shooters can more easily gain shelter during the time-consuming reloading."

@@ -1,0 +1,128 @@
+name = "Man-at-arms"
+action_base = 6
+injuries = []
+
+[skills]
+Archery = 4
+Physician = 3
+Survival = 5
+Throwing = 6
+
+[mh_weapon]
+name = "Spear"
+group = "Polearms"
+restriction = "Simple"
+quality = 11
+heft = 13
+length = 7
+thrusting = true
+aspect = "Point"
+zone_die = 8
+impact_die = 8
+impact_mod = 5
+weight = 4
+price = 60
+description = "Perhaps the most widely used weapon on Kethira, the spear is usually paired with a roundshield by soldiers in tight, ranked formation."
+
+[oh_weapon]
+name = "Roundshield"
+group = "Shields"
+restriction = "Simple"
+quality = 10
+heft = 10
+length = 1
+thrusting = false
+aspect = "Blunt"
+zone_die = 6
+impact_die = 6
+impact_mod = 1
+deflect = 3
+weight = 6
+price = 48
+description = "A medium shield that, along with a sturdy helm, is the core element of defence."
+
+[[armor]]
+name = "Helm"
+material = "Plate"
+covers = [
+    "Skull"
+]
+description = "A steel helmet protecting the skull, typically fitted with a padded liner and chin strap. The simplest form of plate head protection."
+
+[[armor]]
+name = "Cap"
+material = "Padded"
+covers = [
+    "Skull"
+]
+description = "A thickly padded cap worn beneath helms to cushion blows, or alone as modest head protection for those who cannot afford metal."
+
+[[armor]]
+name = "Coat"
+material = "Gambeson"
+covers = [
+    "Neck",
+    "Shoulder",
+    "UpperArm",
+    "Elbow",
+    "Forearm",
+    "Thorax",
+    "Abdomen",
+    "Pelvis",
+    "Thigh",
+]
+description = "A long-sleeved gambeson extending to the thighs, providing the most extensive padded protection available and serving as the essential foundation layer for full plate harness."
+
+[[armor]]
+name = "Vest"
+material = "Cloth"
+covers = [
+    "Thorax",
+    "Abdomen",
+]
+description = "A sleeveless cloth garment covering the chest and abdomen, commonly worn as an undergarment or light outer layer."
+
+[[armor]]
+name = "Kneecops"
+material = "Kurbul"
+covers = [
+    "Knee"
+]
+description = "Rigid kurbul knee guards strapped over padded cuisses, protecting the joint from disabling strikes."
+
+[[armor]]
+name = "Cuisses"
+material = "Padded"
+covers = [
+    "Thigh",
+    "Knee",
+]
+description = "Padded thigh and knee coverings worn beneath metal leg armor to prevent chafing and absorb transmitted impact."
+
+[[armor]]
+name = "Breeches"
+material = "Cloth"
+covers = [
+    "Pelvis",
+    "Thigh",
+    "Knee",
+]
+description = "Short cloth leg coverings extending from the waist to just below the knee, the standard lower garment for working folk."
+
+[[armor]]
+name = "Swaddle"
+material = "Cloth"
+covers = [
+    "Calf",
+    "Foot",
+]
+description = "Strips of cloth wrapped around the lower legs and feet, commonly used by peasants and soldiers in place of proper footwear."
+
+[[armor]]
+name = "Boots"
+material = "Leather"
+covers = [
+    "Calf",
+    "Foot",
+]
+description = "Sturdy leather footwear rising to mid-calf, essential gear for soldiers, travelers, and anyone who regularly traverses rough terrain."

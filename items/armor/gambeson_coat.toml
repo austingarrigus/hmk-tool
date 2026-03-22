@@ -1,0 +1,14 @@
+name = "Coat"
+material = "Gambeson"
+covers = [
+    "Neck",
+    "Shoulder",
+    "UpperArm",
+    "Elbow",
+    "Forearm",
+    "Thorax",
+    "Abdomen",
+    "Pelvis",
+    "Thigh",
+]
+description = "A long-sleeved gambeson extending to the thighs, providing the most extensive padded protection available and serving as the essential foundation layer for full plate harness."

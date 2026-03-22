@@ -1,0 +1,7 @@
+name = "Cowl"
+material = "Cloth"
+covers = [
+    "Skull",
+    "Neck",
+]
+description = "A cloth hood covering the head and neck, commonly worn by monks, travelers, and peasants for warmth and protection from the elements."

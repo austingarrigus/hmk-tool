@@ -1,0 +1,7 @@
+name = "Breastplate"
+material = "Kurbul"
+covers = [
+    "Thorax",
+    "Abdomen",
+]
+description = "A kurbul chest plate covering the front of the torso only, lighter and less expensive than a full cuirass but leaving the back exposed."

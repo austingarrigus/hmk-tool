@@ -1,0 +1,8 @@
+name = "Mantle"
+material = "Padded"
+covers = [
+    "Shoulder",
+    "UpperArm",
+    "Thorax",
+]
+description = "A padded shoulder covering that cushions the weight of overlying armor and provides some protection against glancing blows to the upper body."

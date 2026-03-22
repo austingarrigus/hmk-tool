@@ -1,0 +1,8 @@
+name = "Mantle"
+material = "Quilted"
+covers = [
+    "Shoulder",
+    "UpperArm",
+    "Thorax",
+]
+description = "A quilted shoulder garment with rows of tight stitching that hold the layered fabric in place, distributing the impact of blows."

@@ -1,0 +1,9 @@
+name = "Shirt"
+material = "Padded"
+covers = [
+    "Shoulder",
+    "UpperArm",
+    "Thorax",
+    "Abdomen",
+]
+description = "A padded garment covering the torso and upper arms, the standard foundation layer for soldiers donning heavier armor."

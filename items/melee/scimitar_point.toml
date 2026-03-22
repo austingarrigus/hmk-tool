@@ -1,0 +1,14 @@
+name = "Scimitar"
+group = "Swords"
+restriction = "Simple"
+quality = 12
+heft = 10
+length = 5
+thrusting = true
+aspect = "Point"
+zone_die = 6
+impact_die = 8
+impact_mod = 1
+weight = 3
+price = 184
+description = "While less routinely penetrative than the broadsword, the scimitar's curved blade enhances the slashing injuries produced from its strikes that do land well. Its tip is usually not extremely sharp."

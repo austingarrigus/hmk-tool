@@ -1,0 +1,10 @@
+name = "40lb Composite Bow"
+group = "Bows"
+restriction = "Simple"
+quality = 11
+draw = 40
+base_range = 150
+impact_mod = 1
+weight = 2
+price = 72
+description = "(Ketari bow) An expensive and time-consuming glued construction of strips of wood with animal sinew on the ‘back’, or outer side (for flexing), and animal bone on its ‘belly’, or inner side (for resisting); can be wielded as a fragile club (lng 4 • zd d6 • d6 + 0b • WQ reduced by 5 in Weapon Damage Rolls)."

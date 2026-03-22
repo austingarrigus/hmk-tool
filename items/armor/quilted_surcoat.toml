@@ -1,0 +1,11 @@
+name = "Surcoat"
+material = "Quilted"
+covers = [
+    "Shoulder",
+    "Thorax",
+    "Abdomen",
+    "Pelvis",
+    "Thigh",
+    "Knee",
+]
+description = "A quilted outer garment extending past the waist, providing an additional protective layer when worn over armor."

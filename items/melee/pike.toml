@@ -1,0 +1,14 @@
+name = "Pike"
+group = "Polearms"
+restriction = "Simple"
+quality = 12
+heft = 19
+length = 9
+thrusting = true
+aspect = "Point"
+zone_die = 8
+impact_die = 8
+impact_mod = 6
+weight = 10
+price = 96
+description = "(Great spear) An extremely long spear most often used on foot in formation against cavalry."

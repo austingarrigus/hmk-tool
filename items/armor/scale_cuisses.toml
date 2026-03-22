@@ -1,0 +1,7 @@
+name = "Cuisses"
+material = "Scale"
+covers = [
+    "Thigh",
+    "Knee",
+]
+description = "Scale armor coverings for the thighs and knees, the overlapping plates providing reliable defense for the upper legs."

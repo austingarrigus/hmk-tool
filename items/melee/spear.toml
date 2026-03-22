@@ -1,0 +1,14 @@
+name = "Spear"
+group = "Polearms"
+restriction = "Simple"
+quality = 11
+heft = 13
+length = 7
+thrusting = true
+aspect = "Point"
+zone_die = 8
+impact_die = 8
+impact_mod = 5
+weight = 4
+price = 60
+description = "Perhaps the most widely used weapon on Kethira, the spear is usually paired with a roundshield by soldiers in tight, ranked formation."
