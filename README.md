@@ -21,6 +21,8 @@ Many more features are planned, such as character creation.
 The character sheets are encoded in [MessagePack](https://msgpack.org/index.html) to allow for complex skill keys such as `Language("Hârnic")`, which is not possible in most (easily) human readable formats.
 The tool is capable of reading toml files, but currently there is no interface to access this functionality for player characters.
 
+The premade characters from the free "On the Silver Way" module are included.
+
 # Installing
 You will need Rust and Cargo, which you can install with [Rustup](https://rustup.rs/).
 
