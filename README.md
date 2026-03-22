@@ -30,3 +30,5 @@ Build and run the tool with Cargo:
 ```bash
 cargo install --path .
 ```
+
+Currently, the tool relies on a specific directory structure to work, so I'd recommend just running it from the project directory.
