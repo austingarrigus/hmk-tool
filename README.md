@@ -17,6 +17,8 @@ This is a tool for handling various operations in the HMK roleplaying system, su
 The CLI is extremely crude at the moment, and is subject to change.
 Many more features are planned, such as character creation.
 
+While the code itself was written in a way to allow for more complex tests, such as adding modifiers to rolls, selecting specific weapons, or choosing how Tactical Advantages are used, these features aren't implemented in the CLI yet.
+
 # Character Sheet Format
 The character sheets are encoded in [MessagePack](https://msgpack.org/index.html) to allow for complex skill keys such as `Language("Hârnic")`, which is not possible in most (easily) human readable formats.
 The tool is capable of reading toml files, but currently there is no interface to access this functionality for player characters.
