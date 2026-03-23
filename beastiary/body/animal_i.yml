@@ -1,0 +1,27 @@
+- - 1
+  - - die_limit: 3
+      location: Head
+      shock: 5
+    - die_limit: 5
+      location: Neck
+      shock: 5
+    - die_limit: 10
+      location: Wing
+      shock: 1
+- - 2
+  - - die_limit: 6
+      location: Thorax
+      shock: 4
+    - die_limit: 10
+      location: Abdomen
+      shock: 4
+- - 3
+  - - die_limit: 5
+      location: Wing
+      shock: 1
+    - die_limit: 8
+      location: Leg
+      shock: 2
+    - die_limit: 10
+      location: Tail
+      shock: 1

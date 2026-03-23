@@ -5,7 +5,69 @@ use rand::random_range;
 use serde::{Deserialize, Serialize};
 use strum::EnumIter;
 
-use crate::armor;
+use crate::armor::{self, Location, Material};
+
+#[derive(Serialize, Deserialize, Debug, Clone)]
+pub enum Mode {
+    Melee {
+        length: u8,
+        thrusting: bool,
+        two_hand: bool,
+        aspect: Aspect,
+        zone_die: u8,
+        impact_die: u8,
+        impact_mod: u8,
+    },
+    Range {
+        draw: u16,
+        two_hand: bool,
+        base_range: u16,
+        impact_mod: u8,
+    },
+}
+
+#[derive(Serialize, Deserialize, Debug, Clone)]
+pub enum Item {
+    Weapon {
+        name: String,
+        heft: u8,
+        defense_mod: i8,
+        modes: Vec<Mode>,
+        description: String,
+    },
+    Armor {
+        name: String,
+        material: Material,
+        covers: Vec<Location>,
+        description: String,
+    },
+    Ammo {
+        shaft: ProjectileShaft,
+        head: ProjectileHead,
+    },
+    Misc {
+        name: String,
+        description: String,
+    },
+}
+
+/*
+fn test() {
+    let weapon = Item::Weapon { name: String::from("Test") , heft: 1, defense_mod: 1, modes: (), description: () }
+}
+*/
+
+impl Item {
+    pub fn from_file<P>(path: P) -> Result<Self>
+    where
+        P: AsRef<std::path::Path>,
+    {
+        let mut buf = Vec::new();
+        File::open(path)?.read_to_end(&mut buf)?;
+        let o: Self = toml::from_slice(&buf)?;
+        Ok(o)
+    }
+}
 
 #[derive(Debug)]
 pub struct Attack {

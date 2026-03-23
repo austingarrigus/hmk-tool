@@ -1,7 +1,4 @@
-use crate::{
-    armor::Armor,
-    weapons::{self, MeleeWeapon, Projectile, RangeWeapon},
-};
+use crate::item::{Item, ProjectileHead, ProjectileShaft};
 use anyhow_serde::Result;
 use std::{collections::HashMap, fs::File, io::Read};
 use strum::IntoEnumIterator;
@@ -164,21 +161,21 @@ impl Suit {
         }
     }
 
-    pub fn load(&self) -> Vec<Armor> {
+    pub fn load(&self) -> Vec<Item> {
         self.files()
             .iter()
-            .map(|x| load_armor(x).unwrap())
+            .map(|x| item::from_file(x).unwrap())
             .collect()
     }
 }
 
-pub fn load_melee_weapon<P>(path: P) -> Result<MeleeWeapon>
+pub fn load_melee_weapon<P>(path: P) -> Result<Item>
 where
     P: AsRef<std::path::Path>,
 {
     let mut buf = Vec::new();
     File::open(path)?.read_to_end(&mut buf)?;
-    let o: MeleeWeapon = toml::from_slice(&buf)?;
+    let o: Item = toml::from_slice(&buf)?;
     Ok(o)
 }
 

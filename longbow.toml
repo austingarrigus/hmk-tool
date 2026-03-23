@@ -1,0 +1,12 @@
+[Weapon]
+name = "Longbow"
+heft = 4
+description = "A longbow"
+
+[[Weapon.modes]]
+
+[Weapon.modes.Range]
+draw = 150
+two_hand = true
+base_range = 270
+impact_mod = 5
