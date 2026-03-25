@@ -1,8 +1,0 @@
-name = "Mantle"
-material = "Cloth"
-covers = [
-    "Shoulder",
-    "UpperArm",
-    "Thorax",
-]
-description = "A short cloth garment draped over the shoulders and upper torso, worn as an outer layer for warmth or as a mark of station."

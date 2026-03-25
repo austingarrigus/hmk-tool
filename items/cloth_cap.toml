@@ -1,0 +1,5 @@
+[Armor]
+name = "Cap"
+material = "Cloth"
+covers = ["Skull"]
+description = "A simple cloth cap covering the skull, often worn as an everyday head covering or as a liner beneath heavier headgear."

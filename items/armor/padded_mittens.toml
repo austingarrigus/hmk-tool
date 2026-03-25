@@ -1,6 +1,0 @@
-name = "Mittens"
-material = "Padded"
-covers = [
-    "Hand"
-]
-description = "Padded hand coverings worn beneath metal gauntlets or alone, sacrificing finger dexterity for warmth and cushioning against blows."

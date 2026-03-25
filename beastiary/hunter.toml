@@ -1,5 +1,4 @@
 name = "Hunter"
-action_base = 5
 injuries = []
 
 [skills]
@@ -9,47 +8,67 @@ Survival = 7
 Tracking = 7
 Archery = 6
 
-[mh_weapon]
+[prime_hand.Weapon]
 name = "Knife"
-group = "Knives"
-restriction = "Common"
-quality = 10
-heft = 6
+description = "(Hunting knife) A utilitarian blade, also with a sharp edge (lng 2 • d10 + 0e)."
+
+[[prime_hand.Weapon.modes]]
+
+[prime_hand.Weapon.modes.Melee]
 length = 2
-thrusting = true
+heft = 6
+thrust = true
+two_hand = false
 aspect = "Point"
 zone_die = 6
 impact_die = 8
 impact_mod = 1
-weight = 1
-price = 6
-description = "(Hunting knife) A utilitarian blade, also with a sharp edge (lng 2 • d10 + 0e)."
+defense_mod = 0
 
-[rg_weapon]
+[[inventory]]
+
+[inventory.Weapon]
 name = "75lb Longbow"
-group = "Bows"
-restriction = "Simple"
-quality = 10
-draw = 75
-base_range = 180
-impact_mod = 2
-weight = 2
-price = 45
 description = "(Self bow) A bow made of a single-piece wooden stave; can be used as a fragile club (lng 5 • zd d8 • d6 + 0b • WQ reduced by five in Weapon Damage Rolls)."
 
-[ammo]
+[[inventory.Weapon.modes]]
+
+[inventory.Weapon.modes.Range]
+draw = 75
+two_hand = true
+base_range = 180
+impact_mod = 2
+
+[[inventory.Weapon.modes]]
+
+[inventory.Weapon.modes.Melee]
+length = 5
+heft = 11
+thrust = false
+two_hand = false
+aspect = "Blunt"
+zone_die = 8
+impact_die = 6
+impact_mod = 0
+defense_mod = 0
+
+[[inventory]]
+
+[inventory.Ammo]
 shaft = "Light"
 head = "Broad"
 
-[[armor]]
+[[inventory]]
+
+[inventory.Armor]
 name = "Cap"
 material = "Leather"
-covers = [
-    "Skull"
-]
+covers = ["Skull"]
 description = "A fitted leather cap providing modest protection to the skull, worn by scouts, hunters, and light infantry."
 
-[[armor]]
+[[inventory]]
+
+[inventory.Armor]
 name = "Shirt"
 material = "Padded"
 covers = [
@@ -60,7 +79,9 @@ covers = [
 ]
 description = "A padded garment covering the torso and upper arms, the standard foundation layer for soldiers donning heavier armor."
 
-[[armor]]
+[[inventory]]
+
+[inventory.Armor]
 name = "Tunic, sleeved"
 material = "Cloth"
 covers = [
@@ -74,7 +95,9 @@ covers = [
 ]
 description = "A full-sleeved tunic providing coverage from shoulder to wrist and down to the thighs, favored in colder climates."
 
-[[armor]]
+[[inventory]]
+
+[inventory.Armor]
 name = "Surcoat"
 material = "Cloth"
 covers = [
@@ -87,29 +110,26 @@ covers = [
 ]
 description = "A sleeveless outer garment worn over armor or other clothing, often displaying heraldic devices or guild insignia."
 
-[[armor]]
+[[inventory]]
+
+[inventory.Armor]
 name = "Breeches"
 material = "Cloth"
-covers = [
-    "Pelvis",
-    "Thigh",
-    "Knee",
-]
+covers = ["Pelvis", "Thigh", "Knee"]
 description = "Short cloth leg coverings extending from the waist to just below the knee, the standard lower garment for working folk."
 
-[[armor]]
+[[inventory]]
+
+[inventory.Armor]
 name = "Swaddle"
 material = "Cloth"
-covers = [
-    "Calf",
-    "Foot",
-]
+covers = ["Calf", "Foot"]
 description = "Strips of cloth wrapped around the lower legs and feet, commonly used by peasants and soldiers in place of proper footwear."
 
-[[armor]]
+[[inventory]]
+
+[inventory.Armor]
 name = "Shoes"
 material = "Leather"
-covers = [
-    "Foot"
-]
+covers = ["Foot"]
 description = "Low leather footwear covering the foot, the everyday choice for townsfolk and those not expecting rough travel."

@@ -1,0 +1,16 @@
+[Weapon]
+name = "Tower Shield"
+description = "A heavy rectangular shield that provides greater protection to the legs; usually wielded in large foot formations."
+
+[[Weapon.modes]]
+
+[Weapon.modes.Melee]
+length = 1
+heft = 12
+thrust = false
+two_hand = false
+aspect = "Blunt"
+zone_die = 8
+impact_die = 6
+impact_mod = 1
+defense_mod = 20

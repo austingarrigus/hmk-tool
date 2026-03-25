@@ -1,0 +1,5 @@
+[Armor]
+name = "Gauntlets"
+material = "Scale"
+covers = ["Hand"]
+description = "Hand armor of small metal scales affixed to leather gloves, offering solid protection while maintaining enough flexibility for gripping weapons."

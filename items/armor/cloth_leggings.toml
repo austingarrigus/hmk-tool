@@ -1,9 +1,0 @@
-name = "Leggings"
-material = "Cloth"
-covers = [
-    "Thigh",
-    "Knee",
-    "Calf",
-    "Foot",
-]
-description = "Fitted cloth coverings for the legs from thigh to foot, often worn beneath other garments for warmth."

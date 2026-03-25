@@ -1,0 +1,5 @@
+[Armor]
+name = "Helm"
+material = "Plate"
+covers = ["Skull"]
+description = "A steel helmet protecting the skull, typically fitted with a padded liner and chin strap. The simplest form of plate head protection."

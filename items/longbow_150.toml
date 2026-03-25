@@ -1,0 +1,24 @@
+[Weapon]
+name = "150lb Longbow"
+description = "(Self bow) A bow made of a single-piece wooden stave; can be used as a fragile club (lng 5 • zd d8 • d6 + 0b • WQ reduced by five in Weapon Damage Rolls)."
+
+[[Weapon.modes]]
+
+[Weapon.modes.Range]
+draw = 150
+two_hand = true
+base_range = 270
+impact_mod = 5
+
+[[Weapon.modes]]
+
+[Weapon.modes.Melee]
+length = 5
+heft = 11
+thrust = false
+two_hand = false
+aspect = "Blunt"
+zone_die = 8
+impact_die = 6
+impact_mod = 0
+defense_mod = 0

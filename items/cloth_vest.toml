@@ -1,0 +1,5 @@
+[Armor]
+name = "Vest"
+material = "Cloth"
+covers = ["Thorax", "Abdomen"]
+description = "A sleeveless cloth garment covering the chest and abdomen, commonly worn as an undergarment or light outer layer."

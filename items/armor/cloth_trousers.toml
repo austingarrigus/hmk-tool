@@ -1,9 +1,0 @@
-name = "Trousers"
-material = "Cloth"
-covers = [
-    "Pelvis",
-    "Thigh",
-    "Knee",
-    "Calf",
-]
-description = "Full-length cloth leg coverings from waist to ankle, worn in colder regions or by those preferring greater coverage."

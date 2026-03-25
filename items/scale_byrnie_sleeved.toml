@@ -1,0 +1,12 @@
+[Armor]
+name = "Byrnie, sleeved"
+material = "Scale"
+covers = [
+    "Shoulder",
+    "UpperArm",
+    "Elbow",
+    "Forearm",
+    "Thorax",
+    "Abdomen",
+]
+description = "A full-sleeved scale byrnie extending protection to the forearms, providing comprehensive upper body coverage at a fraction of the cost of equivalent mail."

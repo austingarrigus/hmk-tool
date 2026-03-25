@@ -1,0 +1,16 @@
+[Weapon]
+name = "Wood Axe"
+description = "(Felling axe · Broad axe) A heavy, two-handed tool used for felling trees and chopping wood."
+
+[[Weapon.modes]]
+
+[Weapon.modes.Melee]
+length = 5
+heft = 16
+thrust = false
+two_hand = false
+aspect = "Edge"
+zone_die = 6
+impact_die = 8
+impact_mod = 6
+defense_mod = -10

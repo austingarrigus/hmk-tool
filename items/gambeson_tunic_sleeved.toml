@@ -1,0 +1,14 @@
+[Armor]
+name = "Tunic, sleeved"
+material = "Gambeson"
+covers = [
+    "Neck",
+    "Shoulder",
+    "UpperArm",
+    "Elbow",
+    "Forearm",
+    "Thorax",
+    "Abdomen",
+    "Pelvis",
+]
+description = "A full-sleeved gambeson providing comprehensive protection from neck to wrists and down to the hips, the preferred arming garment worn beneath mail and plate by knights and heavy cavalry."

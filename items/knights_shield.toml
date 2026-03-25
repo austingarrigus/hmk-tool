@@ -1,0 +1,16 @@
+[Weapon]
+name = "Knight's Shield"
+description = "A medium shield often emblazoned with a coat of arms or its colours."
+
+[[Weapon.modes]]
+
+[Weapon.modes.Melee]
+length = 1
+heft = 10
+thrust = false
+two_hand = false
+aspect = "Blunt"
+zone_die = 6
+impact_die = 6
+impact_mod = 1
+defense_mod = 10

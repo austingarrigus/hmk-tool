@@ -1,0 +1,16 @@
+[Weapon]
+name = "Falcastra"
+description = "A weapon developed from attaching a scythe blade to a shaft at a right angle. Most are lesser-quality peasant-rigged weapons."
+
+[[Weapon.modes]]
+
+[Weapon.modes.Melee]
+length = 7
+heft = 18
+thrust = false
+two_hand = false
+aspect = "Point"
+zone_die = 8
+impact_die = 8
+impact_mod = 4
+defense_mod = -5

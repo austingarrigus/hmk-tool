@@ -1,0 +1,16 @@
+[Weapon]
+name = "Kite Shield"
+description = "A large shield that gives nearly full-body protection, favoured by mounted warriors because its tapered end protects a leg."
+
+[[Weapon.modes]]
+
+[Weapon.modes.Melee]
+length = 1
+heft = 11
+thrust = false
+two_hand = false
+aspect = "Blunt"
+zone_die = 8
+impact_die = 6
+impact_mod = 1
+defense_mod = 15

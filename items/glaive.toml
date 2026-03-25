@@ -1,0 +1,16 @@
+[Weapon]
+name = "Glaive"
+description = "A long-shafted weapon with a bladed end, used primarily for cutting strikes but can also be thrust with its pointed tip (lng 7t • d8 + 3p)."
+
+[[Weapon.modes]]
+
+[Weapon.modes.Melee]
+length = 7
+heft = 18
+thrust = false
+two_hand = false
+aspect = "Edge"
+zone_die = 8
+impact_die = 10
+impact_mod = 4
+defense_mod = 0

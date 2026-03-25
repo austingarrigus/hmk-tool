@@ -1,0 +1,16 @@
+[Weapon]
+name = "Estoc"
+description = "Designed to penetrate gaps in plate and mail, the estoc allows half-swording (page 102) more safely since only its tip is sharp. Its thrust-only style makes wielding it one-handed more difficult than a swung broadsword of similar weight. The thin blade sometimes overpenetrates, missing vital organs that the thicker points of spears and other swords would not."
+
+[[Weapon.modes]]
+
+[Weapon.modes.Melee]
+length = 5
+heft = 14
+thrust = true
+two_hand = false
+aspect = "Point"
+zone_die = 6
+impact_die = 8
+impact_mod = 3
+defense_mod = 0

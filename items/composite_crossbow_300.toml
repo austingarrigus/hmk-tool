@@ -1,0 +1,11 @@
+[Weapon]
+name = "300lb Composite Crossbow"
+description = "(Siege crossbow) With a string as thick as a thumb and a composite wood and horn prod, the stout compound crossbow almost invariably requires a mechanical spanner. For this reason many are relegated to siege defence, where the shooters can more easily gain shelter during the time-consuming reloading."
+
+[[Weapon.modes]]
+
+[Weapon.modes.Range]
+draw = 300
+two_hand = true
+base_range = 300
+impact_mod = 6

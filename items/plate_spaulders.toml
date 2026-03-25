@@ -1,0 +1,5 @@
+[Armor]
+name = "Spaulders"
+material = "Plate"
+covers = ["Shoulder"]
+description = "Plate shoulder guards of shaped steel, deflecting blows from the shoulders and upper arms. Often articulated with lames for mobility."

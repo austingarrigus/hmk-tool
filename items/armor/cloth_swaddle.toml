@@ -1,7 +1,0 @@
-name = "Swaddle"
-material = "Cloth"
-covers = [
-    "Calf",
-    "Foot",
-]
-description = "Strips of cloth wrapped around the lower legs and feet, commonly used by peasants and soldiers in place of proper footwear."

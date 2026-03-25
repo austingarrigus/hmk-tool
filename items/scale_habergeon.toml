@@ -1,0 +1,12 @@
+[Armor]
+name = "Habergeon"
+material = "Scale"
+covers = [
+    "Shoulder",
+    "UpperArm",
+    "Elbow",
+    "Thorax",
+    "Abdomen",
+    "Pelvis",
+]
+description = "A half-sleeved scale garment extending below the waist to protect the pelvis, bridging the gap between a byrnie and full hauberk."

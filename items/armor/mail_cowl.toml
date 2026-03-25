@@ -1,7 +1,0 @@
-name = "Cowl"
-material = "Mail"
-covers = [
-    "Skull",
-    "Neck",
-]
-description = "A hood of interlocking metal rings covering the skull and neck, commonly worn over a padded cowl to absorb the force of blows. Mail's flexible mesh provides excellent defense against cutting strikes."

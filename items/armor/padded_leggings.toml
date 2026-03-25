@@ -1,9 +1,0 @@
-name = "Leggings"
-material = "Padded"
-covers = [
-    "Thigh",
-    "Knee",
-    "Calf",
-    "Foot",
-]
-description = "Padded leg coverings from thigh to foot, providing warmth and cushioning for those marching or standing guard in cold conditions."

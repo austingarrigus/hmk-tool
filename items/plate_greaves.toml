@@ -1,0 +1,5 @@
+[Armor]
+name = "Greaves"
+material = "Plate"
+covers = ["Calf"]
+description = "Steel shin guards covering the front and sometimes the full circumference of the lower leg, protecting against low strikes and providing additional defense in the press of melee."

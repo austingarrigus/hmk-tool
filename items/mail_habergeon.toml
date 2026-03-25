@@ -1,0 +1,12 @@
+[Armor]
+name = "Habergeon"
+material = "Mail"
+covers = [
+    "Shoulder",
+    "UpperArm",
+    "Elbow",
+    "Thorax",
+    "Abdomen",
+    "Pelvis",
+]
+description = "A half-sleeved mail garment extending below the waist to the hips, offering more coverage than a byrnie while remaining lighter than a full hauberk."

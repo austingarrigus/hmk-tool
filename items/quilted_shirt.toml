@@ -1,0 +1,10 @@
+[Armor]
+name = "Shirt"
+material = "Quilted"
+covers = [
+    "Shoulder",
+    "UpperArm",
+    "Thorax",
+    "Abdomen",
+]
+description = "A quilted garment covering torso and upper arms, its stitched layers providing reliable protection favored by archers and crossbowmen."

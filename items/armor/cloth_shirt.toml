@@ -1,9 +1,0 @@
-name = "Shirt"
-material = "Cloth"
-covers = [
-    "Shoulder",
-    "UpperArm",
-    "Thorax",
-    "Abdomen",
-]
-description = "A cloth garment covering the torso and upper arms, the most common article of clothing across Kethira."

@@ -1,6 +1,0 @@
-name = "Rerebraces"
-material = "Plate"
-covers = [
-    "UpperArm"
-]
-description = "Tubular steel guards encasing the upper arms, articulated to work with spaulders above and coudes below for complete arm protection."

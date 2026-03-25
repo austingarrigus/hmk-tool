@@ -1,9 +1,0 @@
-name = "Leggings"
-material = "Scale"
-covers = [
-    "Thigh",
-    "Knee",
-    "Calf",
-    "Foot",
-]
-description = "Full-length scale leg armor from thigh to foot, the weight of which demands good physical conditioning from the wearer."

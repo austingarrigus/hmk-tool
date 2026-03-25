@@ -1,0 +1,16 @@
+[Weapon]
+name = "Javelin"
+description = "(Light spear • Dart) A small one-handed throwing spear. The head is either barbed (as listed) or narrowed, similar to a bodkin arrow (d8 + 3p • ar 2p)."
+
+[[Weapon.modes]]
+
+[Weapon.modes.Melee]
+length = 5
+heft = 11
+thrust = true
+two_hand = false
+aspect = "Point"
+zone_die = 6
+impact_die = 8
+impact_mod = 4
+defense_mod = 0

@@ -1,0 +1,5 @@
+[Armor]
+name = "Cowl"
+material = "Padded"
+covers = ["Skull", "Neck"]
+description = "A padded hood covering the skull and neck, worn as a liner beneath mail cowls or as standalone protection for light troops."

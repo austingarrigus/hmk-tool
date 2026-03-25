@@ -1,0 +1,5 @@
+[Armor]
+name = "Kneecops"
+material = "Kurbul"
+covers = ["Knee"]
+description = "Rigid kurbul knee guards strapped over padded cuisses, protecting the joint from disabling strikes."

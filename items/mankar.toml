@@ -1,0 +1,16 @@
+[Weapon]
+name = "Mankar"
+description = "(Short falchion • Orcish scimitar) Lighter and shorter than the Mang, the Mankar allows for effective chopping strikes despite its clumsiness."
+
+[[Weapon.modes]]
+
+[Weapon.modes.Melee]
+length = 3
+heft = 9
+thrust = false
+two_hand = false
+aspect = "Edge"
+zone_die = 6
+impact_die = 8
+impact_mod = 3
+defense_mod = -5

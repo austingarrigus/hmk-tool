@@ -1,0 +1,16 @@
+[Weapon]
+name = "Warflail"
+description = "A military version of the grainflail, the warflail incorporates a metal chain attachment and studs, the latter for improving the chances for landing solid blows, as the flanges do for a mace."
+
+[[Weapon.modes]]
+
+[Weapon.modes.Melee]
+length = 6
+heft = 17
+thrust = false
+two_hand = false
+aspect = "Blunt"
+zone_die = 6
+impact_die = 6
+impact_mod = 6
+defense_mod = -10

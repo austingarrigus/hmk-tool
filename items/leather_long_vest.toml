@@ -1,0 +1,10 @@
+[Armor]
+name = "Long Vest"
+material = "Leather"
+covers = [
+    "Shoulder",
+    "Thorax",
+    "Abdomen",
+    "Pelvis",
+]
+description = "An extended leather vest covering the shoulders and reaching to the hips, offering broader protection than a standard vest while maintaining flexibility."

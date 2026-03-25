@@ -1,0 +1,16 @@
+[Weapon]
+name = "Battleaxe"
+description = "(Long axe · Greataxe) Derived from the wood axe, the battleaxe concentrates its weight in the heavy blade, increasing impact but making it slower in handling. Wielding it one-handed increases reach (lng 6), but only the strongest may do so accurately."
+
+[[Weapon.modes]]
+
+[Weapon.modes.Melee]
+length = 5
+heft = 17
+thrust = false
+two_hand = false
+aspect = "Edge"
+zone_die = 6
+impact_die = 8
+impact_mod = 7
+defense_mod = -10

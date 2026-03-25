@@ -1,8 +1,0 @@
-name = "Great helm"
-material = "Plate"
-covers = [
-    "Skull",
-    "Face",
-    "Neck",
-]
-description = "A fully enclosed steel helmet covering skull, face, and neck, offering the greatest head protection available. The restricted vision and ventilation make it impractical for prolonged wear on foot."

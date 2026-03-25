@@ -100,6 +100,25 @@ pub enum Chance {
     High,
 }
 
+impl Chance {
+    pub fn circle(&self) -> &str {
+        match self {
+            Chance::None => " ",
+            Chance::Low => "○",
+            Chance::Mid => "◐",
+            Chance::High => "●",
+        }
+    }
+    pub fn triangle(&self) -> &str {
+        match self {
+            Chance::None => " ",
+            Chance::Low => "▽",
+            Chance::Mid => "⧨",
+            Chance::High => "▼",
+        }
+    }
+}
+
 #[derive(Hash, Serialize, Deserialize, Debug, Clone, Copy, PartialEq, Eq, EnumIter)]
 pub enum Location {
     Skull,
@@ -390,33 +409,19 @@ impl Injury {
 
 impl Display for Injury {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
-        match self.shock {
-            1 => write!(
-                f,
-                "{:?} M{}{}{}",
-                self.location,
-                self.shock,
-                self.aspect,
-                if self.bleed { " BLD" } else { "" }
-            ),
-            2..=3 => write!(
-                f,
-                "{:?} S{}{}{}",
-                self.location,
-                self.shock,
-                self.aspect,
-                if self.bleed { " BLD" } else { "" }
-            ),
-            4..=5 => write!(
-                f,
-                "{:?} G{}{}{}",
-                self.location,
-                self.shock,
-                self.aspect,
-                if self.bleed { " BLD" } else { "" }
-            ),
-            _ => unreachable!(),
-        }
+        write!(
+            f,
+            "{}{}{}{}",
+            match self.shock {
+                1 => "M",
+                2..=3 => "S",
+                4..=5 => "G",
+                _ => unreachable!(),
+            },
+            self.shock,
+            self.aspect,
+            if self.bleed { " BLD" } else { "" }
+        )
     }
 }
 
@@ -467,16 +472,19 @@ impl Display for Being {
         }
         writeln!(f, "\nInventory:")?;
         writeln!(f, "{}", self.inventory.iter().format(", "))?;
-        writeln!(f, "\n            B  E  P  F")?;
+        writeln!(f, "\n            B  E  P  F  Shk")?;
         for i in self.body.locations() {
             writeln!(
                 f,
-                "{:>10} {:>2} {:>2} {:>2} {:>2}  {}",
+                "{:>10} {:>2} {:>2} {:>2} {:>2}  {}{}{}  {}",
                 format!("{i}:"),
                 self.inventory.protection(i, item::Aspect::Blunt),
                 self.inventory.protection(i, item::Aspect::Edge),
                 self.inventory.protection(i, item::Aspect::Point),
                 self.inventory.protection(i, item::Aspect::FireFrost),
+                i.bleed().circle(),
+                self.body.select(i).unwrap().shock,
+                i.amputate().triangle(),
                 self.injuries
                     .iter()
                     .filter(|x| x.location == i)
@@ -488,6 +496,16 @@ impl Display for Being {
 }
 
 impl Being {
+    pub fn modes(&self) -> Vec<Mode> {
+        let mut attack_modes = Vec::<Mode>::new();
+        if let Some(v) = &self.prime_hand {
+            attack_modes.append(&mut v.modes());
+        }
+        if let Some(v) = &self.off_hand {
+            attack_modes.append(&mut v.modes());
+        }
+        attack_modes
+    }
     pub fn attribute(&self, attribute: Attribute) -> u8 {
         *self.attributes.get(&attribute).unwrap_or(&10)
     }
@@ -527,7 +545,7 @@ impl Being {
     {
         let mut buf = Vec::new();
         File::open(path)?.read_to_end(&mut buf)?;
-        let o: Being = rmp_serde::from_slice(&buf)?;
+        let o: Being = toml::from_slice(&buf)?;
         Ok(o)
     }
 
@@ -541,7 +559,7 @@ impl Being {
         Ok(o)
     }
 
-    pub fn success_test(&self, test: &impl Testable, modifier: i8) -> SuccessResult {
+    pub fn success_test(&self, test: &impl Testable, modifier: i32) -> SuccessResult {
         let eml = test.eml(modifier, self);
         println!("{} tests {test} with EML of {eml}", self.name());
         let roll = random_range(1..=100);
@@ -564,7 +582,7 @@ impl Being {
     pub fn ml(&self, test: impl Testable) -> u8 {
         test.ml(self)
     }
-    pub fn eml(&self, test: impl Testable) -> u8 {
+    pub fn eml(&self, test: impl Testable) -> u32 {
         test.eml(0, self)
     }
 
@@ -574,7 +592,7 @@ impl Being {
         modifier: i8,
         rhs: SuccessResult,
     ) -> (OpposedResult, u8) {
-        let lhs = self.success_test(test, modifier);
+        let lhs = self.success_test(test, modifier as i32);
         match (&lhs, &rhs) {
             (SuccessResult::CriticalSuccess(l), SuccessResult::CriticalSuccess(r))
             | (SuccessResult::Success(l), SuccessResult::Success(r)) => (
@@ -595,9 +613,9 @@ impl Being {
         }
     }
 
-    fn value_test(&self, test: &impl Testable, modifier: i8) -> i8 {
+    pub fn value_test(&self, test: &impl Testable, modifier: i8) -> i8 {
         let index = test.index(self);
-        index.cast_signed() + self.success_test(test, modifier).value_modifer()
+        index.cast_signed() + self.success_test(test, modifier as i32).value_modifer()
     }
 
     pub fn equip(&mut self, item: Item) {
@@ -610,14 +628,9 @@ impl Being {
             .fold(0, |acc, x| if x.is_some() { acc + 1 } else { acc })
     }
 
-    pub fn heft_mod(&self) -> Option<i8> {
+    pub fn heft_mod(&self, mode: Mode) -> Option<i8> {
         let strength = self.attribute(Attribute::Strength).cast_signed();
-        let heft = match self.prime_hand.clone()? {
-            Item::Weapon { heft, .. } => {
-                heft.cast_signed() + if self.hands_full() > 1 { -5 } else { 0 }
-            }
-            _ => return None,
-        };
+        let heft = mode.heft().cast_signed() + if self.hands_full() > 1 { -5 } else { 0 };
         Some(if strength < heft {
             (heft - strength) * -5
         } else {
@@ -670,7 +683,6 @@ impl Being {
     fn shock(&mut self, injury: Injury) -> Option<ShockState> {
         /* TODO: implement fatigue */
         let i: i8 = self.body.shock(injury)?
-            + injury.shock
             + match self.success_test(&Skill::Shock, 0) {
                 SuccessResult::CriticalSuccess(_) => -1,
                 SuccessResult::Success(_) => 0,
@@ -698,6 +710,7 @@ impl Being {
         range: u16,
         aim_zone: u8,
         atk_mode: Mode,
+        ammo: Option<Item>,
         defense: item::DefenseOption,
         def_mode: Mode,
         atk_mod: i8,
@@ -730,7 +743,7 @@ impl Being {
                 let (atk_r, def_r) = atk_mode.reach_diff(def_mode);
                 let (res, stars) = self.opposed_test(
                     &Skill::Melee,
-                    atk_mod + self.heft_mod()? + atk_r,
+                    atk_mod + self.heft_mod(atk_mode)? + atk_r,
                     defense.test(target, def_mode, def_mod, def_r),
                 );
 
@@ -771,13 +784,21 @@ impl Being {
                             if winner == Tiebreak::None {
                                 None
                             } else {
-                                let injury = self.inventory.calc_injury(def);
-                                self.injure(injury?);
+                                let injury = target.inventory.calc_injury(def);
+                                target.injure(injury?);
                                 injury
                             }
                         }
                     },
-                    OpposedResult::Loss => None,
+                    OpposedResult::Loss => {
+                        if matches!(defense, item::DefenseOption::Counterstrike) {
+                            let injury = self.inventory.calc_injury(def);
+                            self.injure(injury?);
+                            injury
+                        } else {
+                            None
+                        }
+                    }
                 }
             }
 
@@ -798,21 +819,23 @@ impl Being {
                     atk_mode,
                 );
                 let r = atk_mode.calc_range(range);
+                eprintln!("calculating range {r:?}");
                 let stars = match self.success_test(&Skill::Archery, r.test_mod()?) {
                     SuccessResult::CriticalSuccess(_) => 2,
                     SuccessResult::Success(_) => 1,
                     _ => return None,
                 };
+                eprintln!("victory stars {stars}");
                 let attack = item::Attack::new(
                     target
                         .body
                         .roll(random_range(1..=r.zone_die()?), aim_zone)?,
-                    self.inventory
-                        .ammo()?
-                        .calc_impact(r.impact_mod()? + (impact_mod * stars).cast_signed()),
+                    ammo?.calc_impact(r.impact_mod()? + (impact_mod * stars).cast_signed()),
                     item::Aspect::Point,
                 );
+                eprintln!("attack {attack:?}");
                 let injury = target.inventory.calc_injury(attack);
+                eprintln!("injury {injury:?}");
                 if let Some(i) = injury {
                     target.injure(i);
                 }

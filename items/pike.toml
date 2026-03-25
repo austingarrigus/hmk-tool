@@ -1,0 +1,16 @@
+[Weapon]
+name = "Pike"
+description = "(Great spear) An extremely long spear most often used on foot in formation against cavalry."
+
+[[Weapon.modes]]
+
+[Weapon.modes.Melee]
+length = 9
+heft = 19
+thrust = true
+two_hand = false
+aspect = "Point"
+zone_die = 8
+impact_die = 8
+impact_mod = 6
+defense_mod = 0

@@ -1,0 +1,5 @@
+[Armor]
+name = "Vest"
+material = "Mail"
+covers = ["Thorax", "Abdomen"]
+description = "A sleeveless mail garment protecting the chest and abdomen, worn by those desiring the superior cutting defense of mail without the weight and expense of sleeved versions."

@@ -1,7 +1,0 @@
-name = "Cuisses"
-material = "Quilted"
-covers = [
-    "Thigh",
-    "Knee",
-]
-description = "Quilted thigh and knee coverings with stitched layers, worn beneath rigid leg armor or as standalone protection for mounted troops."

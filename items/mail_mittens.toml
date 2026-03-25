@@ -1,0 +1,5 @@
+[Armor]
+name = "Mittens"
+material = "Mail"
+covers = ["Hand"]
+description = "Mail hand coverings of interlocked rings, typically integrated with the sleeves of a hauberk or worn separately. The mesh construction preserves reasonable grip while defending against edge wounds."

@@ -1,0 +1,5 @@
+[Armor]
+name = "Cuirass"
+material = "Kurbul"
+covers = ["Thorax", "Abdomen"]
+description = "A kurbul torso defense covering both chest and back, formed from shaped and hardened panels laced together at the sides. A cost-effective alternative to metal body armor."

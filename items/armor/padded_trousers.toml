@@ -1,9 +1,0 @@
-name = "Trousers"
-material = "Padded"
-covers = [
-    "Pelvis",
-    "Thigh",
-    "Knee",
-    "Calf",
-]
-description = "Full-length padded leg coverings worn as an arming layer beneath mail or scale leggings."

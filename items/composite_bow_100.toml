@@ -1,0 +1,24 @@
+[Weapon]
+name = "100lb Composite Bow"
+description = "(Ketari bow) An expensive and time-consuming glued construction of strips of wood with animal sinew on the 'back', or outer side (for flexing), and animal bone on its 'belly', or inner side (for resisting); can be wielded as a fragile club (lng 4 • zd d6 • d6 + 0b • WQ reduced by 5 in Weapon Damage Rolls)."
+
+[[Weapon.modes]]
+
+[Weapon.modes.Range]
+draw = 100
+two_hand = true
+base_range = 240
+impact_mod = 4
+
+[[Weapon.modes]]
+
+[Weapon.modes.Melee]
+length = 4
+heft = 11
+thrust = false
+two_hand = false
+aspect = "Blunt"
+zone_die = 6
+impact_die = 6
+impact_mod = 0
+defense_mod = 0

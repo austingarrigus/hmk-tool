@@ -1,0 +1,14 @@
+[Armor]
+name = "Hauberk"
+material = "Mail"
+covers = [
+    "Shoulder",
+    "UpperArm",
+    "Elbow",
+    "Forearm",
+    "Thorax",
+    "Abdomen",
+    "Pelvis",
+    "Thigh",
+]
+description = "The premier mail garment, a full-sleeved coat of interlocked rings extending to mid-thigh. The hauberk is the defining armor of mounted knights and represents a considerable investment in materials and craftsmanship."

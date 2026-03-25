@@ -1,0 +1,14 @@
+[Armor]
+name = "Coat"
+material = "Cloth"
+covers = [
+    "Shoulder",
+    "UpperArm",
+    "Elbow",
+    "Forearm",
+    "Thorax",
+    "Abdomen",
+    "Pelvis",
+    "Thigh",
+]
+description = "A long cloth garment with full sleeves extending below the knees, worn as an outer layer against weather."

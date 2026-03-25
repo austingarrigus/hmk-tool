@@ -1,7 +1,0 @@
-name = "Cowl"
-material = "Quilted"
-covers = [
-    "Skull",
-    "Neck",
-]
-description = "A quilted hood with stitched layers covering the skull and neck, superior to simple padding in retaining its protective shape."

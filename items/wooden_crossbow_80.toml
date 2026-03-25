@@ -1,0 +1,11 @@
+[Weapon]
+name = "80lb Wooden Crossbow"
+description = "(Hunting crossbow) Light-draw versions are not uncommon hunting weapons. The archer's ability to hold and aim shots grants an advantage in stalking game."
+
+[[Weapon.modes]]
+
+[Weapon.modes.Range]
+draw = 80
+two_hand = true
+base_range = 180
+impact_mod = 1

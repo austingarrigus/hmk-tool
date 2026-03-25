@@ -1,0 +1,16 @@
+[Weapon]
+name = "Warhammer"
+description = "A heavy-headed bludgeoning weapon designed to dent and smash rigid armours. Its opposing spike can be used to make point strikes (d8 + 3p • ar 2p)."
+
+[[Weapon.modes]]
+
+[Weapon.modes.Melee]
+length = 5
+heft = 13
+thrust = false
+two_hand = false
+aspect = "Blunt"
+zone_die = 6
+impact_die = 6
+impact_mod = 4
+defense_mod = -10

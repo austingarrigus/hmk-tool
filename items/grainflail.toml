@@ -1,0 +1,16 @@
+[Weapon]
+name = "Grainflail"
+description = "An agriculture tool used for threshing, the grainflail offers the same advantages to attacks as other similarly designed flail weapons."
+
+[[Weapon.modes]]
+
+[Weapon.modes.Melee]
+length = 5
+heft = 11
+thrust = false
+two_hand = false
+aspect = "Blunt"
+zone_die = 6
+impact_die = 6
+impact_mod = 2
+defense_mod = -10

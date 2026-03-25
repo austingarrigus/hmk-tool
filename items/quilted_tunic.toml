@@ -1,0 +1,12 @@
+[Armor]
+name = "Tunic"
+material = "Quilted"
+covers = [
+    "Shoulder",
+    "UpperArm",
+    "Elbow",
+    "Thorax",
+    "Abdomen",
+    "Pelvis",
+]
+description = "A quilted garment with half-sleeves extending to the hips, its stitched construction maintaining consistent padding throughout."

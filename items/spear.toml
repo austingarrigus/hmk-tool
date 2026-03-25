@@ -1,0 +1,16 @@
+[Weapon]
+name = "Spear"
+description = "Perhaps the most widely used weapon on Kethira, the spear is usually paired with a roundshield by soldiers in tight, ranked formation."
+
+[[Weapon.modes]]
+
+[Weapon.modes.Melee]
+length = 7
+heft = 13
+thrust = true
+two_hand = false
+aspect = "Point"
+zone_die = 8
+impact_die = 8
+impact_mod = 5
+defense_mod = 0

@@ -1,0 +1,12 @@
+[Armor]
+name = "Tunic"
+material = "Cloth"
+covers = [
+    "Shoulder",
+    "UpperArm",
+    "Elbow",
+    "Thorax",
+    "Abdomen",
+    "Pelvis",
+]
+description = "A knee-length cloth garment extending from the shoulders to the thighs, belted at the waist and worn by commoners and nobles alike."

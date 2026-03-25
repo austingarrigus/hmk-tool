@@ -1,0 +1,5 @@
+[Armor]
+name = "Vest"
+material = "Padded"
+covers = ["Thorax", "Abdomen"]
+description = "A padded torso garment worn as an arming doublet beneath mail or plate, essential for preventing bruising from blows transmitted through rigid armor."

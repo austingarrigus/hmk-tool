@@ -1,0 +1,16 @@
+[Weapon]
+name = "Ball & Chain"
+description = "(Horseman's flail) The chain both makes it harder for foes to defend and allows for more impactful strikes, as the wielder can better swing through a connecting blow. The spikes do not deliver an appreciable puncture injury but instead help the ball better grip an armoured target, similar in effect to a mace's flanges."
+
+[[Weapon.modes]]
+
+[Weapon.modes.Melee]
+length = 5
+heft = 14
+thrust = false
+two_hand = false
+aspect = "Blunt"
+zone_die = 6
+impact_die = 6
+impact_mod = 5
+defense_mod = -10

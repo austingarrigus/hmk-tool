@@ -1,0 +1,5 @@
+[Armor]
+name = "Gauntlets"
+material = "Cloth"
+covers = ["Hand"]
+description = "Light cloth hand coverings offering minimal protection, typically worn for warmth or to prevent blistering during labor."

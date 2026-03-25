@@ -1,0 +1,5 @@
+[Armor]
+name = "Coudes"
+material = "Kurbul"
+covers = ["Elbow"]
+description = "Rigid kurbul elbow guards, articulated or cupped to allow the arm to bend while protecting the vulnerable joint."

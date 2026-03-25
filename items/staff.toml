@@ -1,0 +1,16 @@
+[Weapon]
+name = "Staff"
+description = "(Quarterstaff) This symmetrically balanced weapon allows for great control. The staff may be employed in Trip attacks, using its length instead of the unarmed Trip's LNG 2 (page 106)."
+
+[[Weapon.modes]]
+
+[Weapon.modes.Melee]
+length = 5
+heft = 12
+thrust = false
+two_hand = false
+aspect = "Blunt"
+zone_die = 6
+impact_die = 6
+impact_mod = 2
+defense_mod = 0

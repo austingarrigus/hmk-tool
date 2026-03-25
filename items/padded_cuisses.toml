@@ -1,0 +1,5 @@
+[Armor]
+name = "Cuisses"
+material = "Padded"
+covers = ["Thigh", "Knee"]
+description = "Padded thigh and knee coverings worn beneath metal leg armor to prevent chafing and absorb transmitted impact."

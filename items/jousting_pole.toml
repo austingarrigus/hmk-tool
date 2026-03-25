@@ -1,0 +1,16 @@
+[Weapon]
+name = "Jousting Pole"
+description = "A lance tipped with several blunted prongs rather than a single pointed blade. Such a head, used in tournaments, better catches hold of opposing shields (+2 impact for shield damage), and is less lethal should it strike the rider or horse."
+
+[[Weapon.modes]]
+
+[Weapon.modes.Melee]
+length = 8
+heft = 16
+thrust = true
+two_hand = false
+aspect = "Blunt"
+zone_die = 8
+impact_die = 6
+impact_mod = 2
+defense_mod = 0

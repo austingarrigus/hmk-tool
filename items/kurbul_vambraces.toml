@@ -1,0 +1,5 @@
+[Armor]
+name = "Vambraces"
+material = "Kurbul"
+covers = ["Forearm"]
+description = "Kurbul forearm guards strapped over the sleeves, protecting the outer forearm from edge strikes and deflecting blows during weapon handling."

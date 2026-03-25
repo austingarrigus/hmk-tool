@@ -1,0 +1,16 @@
+[Weapon]
+name = "Handaxe"
+description = "(Bearded axe) A combat axe designed for one-handed use. The hooked portion of the blade in the 'bearded' style pictured is used to pull opposing shields aside or to help disarm foes (treat as an Unarmed [Grab] attack using the axe's Length 5)."
+
+[[Weapon.modes]]
+
+[Weapon.modes.Melee]
+length = 5
+heft = 13
+thrust = false
+two_hand = false
+aspect = "Edge"
+zone_die = 6
+impact_die = 8
+impact_mod = 5
+defense_mod = -10

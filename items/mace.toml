@@ -1,0 +1,16 @@
+[Weapon]
+name = "Mace"
+description = "The flanges on the head are not for puncturing armour but for helping land more solid strikes by minimizing glancing blows. Many maces have wooden shafts, reducing their price for a lower performance (wq 11 • hft 11 • d6 + 3b • 3 lb • 84d)."
+
+[[Weapon.modes]]
+
+[Weapon.modes.Melee]
+length = 4
+heft = 13
+thrust = false
+two_hand = false
+aspect = "Blunt"
+zone_die = 6
+impact_die = 6
+impact_mod = 4
+defense_mod = -5

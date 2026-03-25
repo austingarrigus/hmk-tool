@@ -1,5 +1,4 @@
 name = "Melona"
-action_base = 5
 injuries = []
 
 [skills]
@@ -8,31 +7,34 @@ Physician = 3
 Survival = 5
 Throwing = 6
 
-[mh_weapon]
+[prime_hand.Weapon]
 name = "Handaxe"
-group = "Axes"
-restriction = "Simple"
-quality = 12
-heft = 10
+description = "(Arming sword • War sword) The most popular weapon of the feudal gentry, the broadsword allows for a high degree of control. This is a lethal advantage against all defences but mail and plate, which routinely turn its slicing blows."
+
+[[prime_hand.Weapon.modes]]
+
+[prime_hand.Weapon.modes.Melee]
 length = 5
-thrusting = false
+heft = 10
+thrust = false
+two_hand = false
 aspect = "Edge"
 zone_die = 8
 impact_die = 8
 impact_mod = 5
-weight = 3
-price = 156
-description = "(Arming sword • War sword) The most popular weapon of the feudal gentry, the broadsword allows for a high degree of control. This is a lethal advantage against all defences but mail and plate, which routinely turn its slicing blows."
+defense_mod = 0
 
-[[armor]]
+[[inventory]]
+
+[inventory.Armor]
 name = "Cap"
 material = "Padded"
-covers = [
-    "Skull",
-]
+covers = ["Skull"]
 description = "A thickly padded cap worn beneath helms to cushion blows, or alone as modest head protection for those who cannot afford metal."
 
-[[armor]]
+[[inventory]]
+
+[inventory.Armor]
 name = "Tunic"
 material = "Padded"
 covers = [
@@ -45,7 +47,9 @@ covers = [
 ]
 description = "A padded garment extending from shoulders to hips with half-sleeves, frequently worn as the primary armor of militia and levy troops."
 
-[[armor]]
+[[inventory]]
+
+[inventory.Armor]
 name = "Trousers"
 material = "Cloth"
 covers = [
@@ -56,20 +60,18 @@ covers = [
 ]
 description = "Full-length cloth leg coverings from waist to ankle, worn in colder regions or by those preferring greater coverage."
 
-[[armor]]
+[[inventory]]
+
+[inventory.Armor]
 name = "Swaddle"
 material = "Cloth"
-covers = [
-    "Calf",
-    "Foot",
-]
+covers = ["Calf", "Foot"]
 description = "Strips of cloth wrapped around the lower legs and feet, commonly used by peasants and soldiers in place of proper footwear."
 
-[[armor]]
+[[inventory]]
+
+[inventory.Armor]
 name = "Boots"
 material = "Leather"
-covers = [
-    "Calf",
-    "Foot",
-]
+covers = ["Calf", "Foot"]
 description = "Sturdy leather footwear rising to mid-calf, essential gear for soldiers, travelers, and anyone who regularly traverses rough terrain."

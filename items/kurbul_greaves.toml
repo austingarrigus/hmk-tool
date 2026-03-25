@@ -1,0 +1,5 @@
+[Armor]
+name = "Greaves"
+material = "Kurbul"
+covers = ["Calf"]
+description = "Kurbul shin guards covering the front of the lower leg, shaped to deflect downward strikes and protect against low cuts."

@@ -1,9 +1,0 @@
-name = "Byrnie"
-material = "Scale"
-covers = [
-    "Shoulder",
-    "UpperArm",
-    "Thorax",
-    "Abdomen",
-]
-description = "A short-sleeved scale armor garment covering the torso and upper arms, worn by soldiers who require more protection than leather but cannot afford mail."

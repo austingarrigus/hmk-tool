@@ -1,5 +1,4 @@
 name = "Donar"
-action_base = 6
 injuries = []
 
 [skills]
@@ -8,56 +7,59 @@ Physician = 3
 Survival = 5
 Throwing = 6
 
-[mh_weapon]
+[prime_hand.Weapon]
 name = "Broadsword"
-group = "Swords"
-restriction = "Chivalric"
-quality = 12
-heft = 10
+description = "(Arming sword • War sword) The most popular weapon of the feudal gentry, the broadsword allows for a high degree of control. This is a lethal advantage against all defences but mail and plate, which routinely turn its slicing blows."
+
+[[prime_hand.Weapon.modes]]
+
+[prime_hand.Weapon.modes.Melee]
 length = 5
-thrusting = false
+heft = 10
+thrust = false
+two_hand = false
 aspect = "Edge"
 zone_die = 6
 impact_die = 10
 impact_mod = 3
-weight = 3
-price = 156
-description = "(Arming sword • War sword) The most popular weapon of the feudal gentry, the broadsword allows for a high degree of control. This is a lethal advantage against all defences but mail and plate, which routinely turn its slicing blows."
+defense_mod = 0
 
-[oh_weapon]
+[off_hand.Weapon]
 name = "Roundshield"
-group = "Shields"
-restriction = "Simple"
-quality = 10
-heft = 10
+description = "A medium shield that, along with a sturdy helm, is the core element of defence."
+
+[[off_hand.Weapon.modes]]
+
+[off_hand.Weapon.modes.Melee]
 length = 1
-thrusting = false
+heft = 10
+thrust = false
+two_hand = false
 aspect = "Blunt"
 zone_die = 6
 impact_die = 6
 impact_mod = 1
-deflect = 3
-weight = 6
-price = 48
-description = "A medium shield that, along with a sturdy helm, is the core element of defence."
+defense_mod = 3
 
-[[armor]]
+[[inventory]]
+
+[inventory.Armor]
 name = "Helm"
 material = "Plate"
-covers = [
-    "Skull",
-]
+covers = ["Skull"]
 description = "A steel helmet protecting the skull, typically fitted with a padded liner and chin strap. The simplest form of plate head protection."
 
-[[armor]]
+[[inventory]]
+
+[inventory.Armor]
 name = "Cap"
 material = "Padded"
-covers = [
-    "Skull",
-]
+covers = ["Skull"]
 description = "A thickly padded cap worn beneath helms to cushion blows, or alone as modest head protection for those who cannot afford metal."
 
-[[armor]]
+[[inventory]]
+
+[inventory.Armor]
 name = "Byrnie"
 material = "Mail"
 covers = [
@@ -68,7 +70,9 @@ covers = [
 ]
 description = "A short-sleeved mail shirt covering the torso and upper arms, the standard armor of professional soldiers across Kethira. Its interlocked rings provide superior defense against slashing weapons."
 
-[[armor]]
+[[inventory]]
+
+[inventory.Armor]
 name = "Tunic"
 material = "Padded"
 covers = [
@@ -81,7 +85,9 @@ covers = [
 ]
 description = "A padded garment extending from shoulders to hips with half-sleeves, frequently worn as the primary armor of militia and levy troops."
 
-[[armor]]
+[[inventory]]
+
+[inventory.Armor]
 name = "Trousers"
 material = "Cloth"
 covers = [
@@ -92,20 +98,18 @@ covers = [
 ]
 description = "Full-length cloth leg coverings from waist to ankle, worn in colder regions or by those preferring greater coverage."
 
-[[armor]]
+[[inventory]]
+
+[inventory.Armor]
 name = "Swaddle"
 material = "Cloth"
-covers = [
-    "Calf",
-    "Foot",
-]
+covers = ["Calf", "Foot"]
 description = "Strips of cloth wrapped around the lower legs and feet, commonly used by peasants and soldiers in place of proper footwear."
 
-[[armor]]
+[[inventory]]
+
+[inventory.Armor]
 name = "Boots"
 material = "Leather"
-covers = [
-    "Calf",
-    "Foot",
-]
+covers = ["Calf", "Foot"]
 description = "Sturdy leather footwear rising to mid-calf, essential gear for soldiers, travelers, and anyone who regularly traverses rough terrain."

@@ -1,0 +1,5 @@
+[Armor]
+name = "Shoes"
+material = "Leather"
+covers = ["Foot"]
+description = "Low leather footwear covering the foot, the everyday choice for townsfolk and those not expecting rough travel."

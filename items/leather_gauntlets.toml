@@ -1,0 +1,5 @@
+[Armor]
+name = "Gauntlets"
+material = "Leather"
+covers = ["Hand"]
+description = "Leather hand coverings with reinforced knuckles and palms, offering a balance of protection and dexterity."

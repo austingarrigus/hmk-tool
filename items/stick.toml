@@ -1,0 +1,16 @@
+[Weapon]
+name = "Stick"
+description = "(Baton) A smaller club for close-quarter fighting. Treat torches as sticks when used to strike (see page 121 sidebar about targeting someone with a flaming torch)."
+
+[[Weapon.modes]]
+
+[Weapon.modes.Melee]
+length = 3
+heft = 9
+thrust = false
+two_hand = false
+aspect = "Blunt"
+zone_die = 6
+impact_die = 6
+impact_mod = 0
+defense_mod = 0

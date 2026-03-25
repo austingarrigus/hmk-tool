@@ -5,20 +5,25 @@ mod being;
 mod core;
 mod item;
 
-use anyhow_serde::Result;
+use anyhow_serde::{Context, Result};
+use clap::{Parser, Subcommand};
+use inquire::Select;
+use itertools::Itertools;
+use strum::IntoEnumIterator;
 
-use crate::{being::BodyType, core::AttributeSet, item::Mode};
+use crate::{
+    being::BodyType,
+    core::{Skill, SkillSet},
+    item::{DefenseOption, Inventory, Mode},
+};
 
-/*
 #[derive(Parser)]
 #[command(version, about)]
 struct Cli {
     #[command(subcommand)]
     command: Option<Commands>,
 }
-*/
 
-/*
 #[derive(Subcommand)]
 enum Commands {
     CreateNpc {
@@ -29,32 +34,33 @@ enum Commands {
         name: String,
     },
 
-    RangeAttack {
+    Attack {
         attacker: String,
         target: String,
+        #[arg(default_value_t = 5)]
         range: u16,
-    },
-
-    MeleeAttack {
-        attacker: String,
-        target: String,
-        defense_option: weapons::DefenseOption,
+        #[arg(long, short = 'z', default_value_t = 1)]
+        aim_zone: u8,
+        #[arg(long, short, default_value_t = 0)]
+        attack_modifier: i8,
+        #[arg(long, short, default_value_t = 0)]
+        defense_modifier: i8,
     },
 
     Test {
-        skill: Skill,
+        skill: core::Skill,
         name: String,
     },
 
     OpposedTest {
-        lhs_skill: Skill,
+        lhs_skill: core::Skill,
         lhs_character: String,
-        rhs_skill: Skill,
+        rhs_skill: core::Skill,
         rhs_character: String,
     },
 
     ValueTest {
-        skill: Skill,
+        skill: core::Skill,
         name: String,
     },
 
@@ -66,71 +72,68 @@ enum Commands {
         names: Vec<String>,
     },
 }
-*/
 
 fn main() -> Result<()> {
-    use core::Attribute::*;
-    let mut nolora = being::Being::read_sheet_toml("nolora")?;
-    let mut elben = being::Being::read_sheet_toml("elben")?;
-    let nolora_attack_mode = *nolora.prime_hand.clone().unwrap().modes().first().unwrap();
-    let elben_attack_mode = *elben.prime_hand.clone().unwrap().modes().first().unwrap();
-    elben.attack(
-        &mut nolora,
-        3,
-        1,
-        elben_attack_mode,
-        item::DefenseOption::Dodge,
-        nolora_attack_mode,
-        0,
-        0,
-    );
-    println!("{nolora}");
-    println!("{elben}");
-    nolora.write_sheet("nolora")?;
-    elben.write_sheet("elben")?;
-    /*
     let command = Cli::parse().command.context("No subcommand")?;
     match command {
         Commands::CreateNpc { name } => {
-            let npc: Character = beastiary::Npc::load(format!("beastiary/{name}.toml"))?.into();
+            let npc = being::Being::read_sheet(format!("beastiary/{name}.toml"))?;
             npc.write_sheet(name)?;
         }
         Commands::FullHeal { name } => {
             let name = name.to_lowercase();
-            let mut c = beastiary::Character::read_sheet(&name)?;
+            let mut c = being::Being::read_sheet(&name)?;
             c.injuries = Vec::new();
-            c.shock_state = None;
+            c.shock = None;
             c.write_sheet(name)?;
         }
-        Commands::RangeAttack {
+        Commands::Attack {
             attacker,
             target,
             range,
+            aim_zone,
+            attack_modifier,
+            defense_modifier,
+            ..
         } => {
             let attacker = attacker.to_lowercase();
             let target = target.to_lowercase();
-            let a = beastiary::Character::read_sheet(attacker)?;
-            let mut t = beastiary::Character::read_sheet(&target)?;
-            a.range_attack(&mut t, range);
-            t.write_sheet(target)?;
-        }
-        Commands::MeleeAttack {
-            attacker,
-            target,
-            defense_option,
-        } => {
-            let attacker = attacker.to_lowercase();
-            let target = target.to_lowercase();
-            let mut a = beastiary::Character::read_sheet(&attacker)?;
-            let mut t = beastiary::Character::read_sheet(&target)?;
-            a.melee_attack(0, &mut t, defense_option, 0);
+            let mut a = being::Being::read_sheet(&attacker)?;
+            let mut t = being::Being::read_sheet(&target)?;
+            let atk_mode = Select::new("Select attack mode", a.modes()).prompt()?;
+            let ammo = if matches!(atk_mode, item::Mode::Range { .. }) {
+                Select::new("Ammo:", a.inventory.ammo()).prompt().ok()
+            } else {
+                None
+            };
+            let def_mode = Select::new("Select defense mode", t.modes()).prompt()?;
+            let defense = if matches!(atk_mode, item::Mode::Melee { .. }) {
+                Select::new(
+                    "Select defense option",
+                    item::DefenseOption::iter().collect(),
+                )
+                .prompt()?
+            } else {
+                DefenseOption::Dodge
+            };
+            a.attack(
+                &mut t,
+                range,
+                aim_zone,
+                atk_mode,
+                ammo,
+                defense,
+                def_mode,
+                attack_modifier,
+                defense_modifier,
+            );
             a.write_sheet(attacker)?;
             t.write_sheet(target)?;
         }
         Commands::Test { skill, name } => {
             let name = name.to_lowercase();
-            let c = beastiary::Character::read_sheet(&name)?;
-            println!("{:?}", c.success_test(skill, 0));
+            let c = being::Being::read_sheet(&name)?;
+            println!("{:?}", c.success_test(&skill, 0));
         }
         Commands::OpposedTest {
             lhs_skill,
@@ -140,32 +143,32 @@ fn main() -> Result<()> {
         } => {
             let lhs_character = lhs_character.to_lowercase();
             let rhs_character = rhs_character.to_lowercase();
-            let l = beastiary::Character::read_sheet(&lhs_character)?;
-            let r = beastiary::Character::read_sheet(&rhs_character)?;
+            let l = being::Being::read_sheet(&lhs_character)?;
+            let r = being::Being::read_sheet(&rhs_character)?;
             println!(
                 "{:?}",
-                l.opposed_test(lhs_skill, 0, r.success_test(rhs_skill, 0))
+                l.opposed_test(&lhs_skill, 0, r.success_test(&rhs_skill, 0))
             );
         }
         Commands::ValueTest { skill, name } => {
             let name = name.to_lowercase();
-            let c = beastiary::Character::read_sheet(&name)?;
-            println!("{:?}", c.value_test(skill, 0));
+            let c = being::Being::read_sheet(&name)?;
+            println!("{:?}", c.value_test(&skill, 0));
         }
         Commands::Sheet { name } => {
             let name = name.to_lowercase();
-            let c = beastiary::Character::read_sheet(&name)?;
+            let c = being::Being::read_sheet(&name)?;
             println!("{c}");
         }
         Commands::Initiative { names } => {
             names
                 .iter()
                 .map(|name| {
-                    let c = beastiary::Character::read_sheet(name).unwrap();
+                    let c = being::Being::read_sheet(name).unwrap();
                     (
                         c.name().clone(),
                         c.ml(Skill::Initiative),
-                        if let Some(shock) = c.shock_state {
+                        if let Some(shock) = c.shock {
                             format!("{shock:?}")
                         } else {
                             String::new()
@@ -177,6 +180,5 @@ fn main() -> Result<()> {
                 .for_each(|x| println!("{:<10} {} {}", x.0, x.1, x.2));
         }
     }
-    */
     Ok(())
 }

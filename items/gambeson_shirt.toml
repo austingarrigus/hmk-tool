@@ -1,0 +1,11 @@
+[Armor]
+name = "Shirt"
+material = "Gambeson"
+covers = [
+    "Neck",
+    "Shoulder",
+    "UpperArm",
+    "Thorax",
+    "Abdomen",
+]
+description = "A gambeson covering the neck, shoulders, and torso, its many layers of compressed linen providing substantial protection often sufficient as primary armor for professional soldiers."

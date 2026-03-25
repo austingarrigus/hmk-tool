@@ -1,7 +1,6 @@
 [Weapon]
 name = "Longbow"
-heft = 4
-description = "A longbow"
+description = ""
 
 [[Weapon.modes]]
 

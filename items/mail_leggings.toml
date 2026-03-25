@@ -1,0 +1,10 @@
+[Armor]
+name = "Leggings"
+material = "Mail"
+covers = [
+    "Thigh",
+    "Knee",
+    "Calf",
+    "Foot",
+]
+description = "Full mail leg coverings from thigh to foot, laced to a belt at the waist. Complete mail leggings are expensive and heavy but essential for fully armored cavalry."

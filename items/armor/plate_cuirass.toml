@@ -1,7 +1,0 @@
-name = "Cuirass"
-material = "Plate"
-covers = [
-    "Thorax",
-    "Abdomen",
-]
-description = "A complete steel torso defense of breastplate and backplate, the centerpiece of full plate harness. Shaped to deflect blows and distribute weight onto the hips."

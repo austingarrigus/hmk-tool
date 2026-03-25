@@ -1,0 +1,5 @@
+[Armor]
+name = "Coudes"
+material = "Plate"
+covers = ["Elbow"]
+description = "Steel elbow guards with flared wings to protect the inner joint, a critical component of full plate arm harness."

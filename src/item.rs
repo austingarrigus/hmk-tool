@@ -17,6 +17,7 @@ use strum::EnumIter;
 pub enum Mode {
     Melee {
         length: u8,
+        heft: u8,
         thrust: bool,
         two_hand: bool,
         aspect: Aspect,
@@ -50,10 +51,8 @@ impl Display for Mode {
                 if *thrust { "T" } else { "" }
             ),
             Mode::Range {
-                base_range,
-                impact_mod,
-                ..
-            } => write!(f, "{base_range}' •+{impact_mod}P"),
+                draw, impact_mod, ..
+            } => write!(f, "{draw}lb •+{impact_mod}P"),
         }
     }
 }
@@ -91,6 +90,13 @@ impl Mode {
         }
     }
 
+    pub fn heft(self) -> u8 {
+        match self {
+            Mode::Melee { heft, .. } => heft,
+            Mode::Range { .. } => 0,
+        }
+    }
+
     pub fn defense_mod(self) -> i8 {
         match self {
             Mode::Melee { defense_mod, .. } => defense_mod,
@@ -109,7 +115,7 @@ impl Mode {
     pub fn impact_die(self) -> i8 {
         match self {
             Mode::Melee { impact_die, .. } => impact_die,
-            _ => 0,
+            Mode::Range { .. } => 1,
         }
     }
 
@@ -122,15 +128,15 @@ impl Mode {
     pub fn calc_range(self, value: u16) -> MissileRange {
         match self {
             Mode::Range { base_range, .. } => {
-                if value >= base_range * 2 {
+                if value <= base_range / 2 {
                     MissileRange::DirectPB
-                } else if value >= base_range {
+                } else if value <= base_range {
                     MissileRange::Direct
-                } else if value * 2 >= base_range {
+                } else if value <= base_range * 2 {
                     MissileRange::Volley2
-                } else if value * 3 >= base_range {
+                } else if value <= base_range * 3 {
                     MissileRange::Volley3
-                } else if value * 4 >= base_range {
+                } else if value <= base_range * 4 {
                     MissileRange::Volley4
                 } else {
                     MissileRange::None
@@ -141,7 +147,7 @@ impl Mode {
     }
 }
 
-#[derive(Clone, Copy)]
+#[derive(Debug, Clone, Copy)]
 pub enum MissileRange {
     DirectPB,
     Direct,
@@ -152,7 +158,7 @@ pub enum MissileRange {
 }
 
 impl MissileRange {
-    pub fn test_mod(self) -> Option<i8> {
+    pub fn test_mod(self) -> Option<i32> {
         match self {
             MissileRange::DirectPB => Some(10),
             MissileRange::Direct | MissileRange::Volley2 => Some(0),
@@ -187,7 +193,6 @@ impl MissileRange {
 pub enum Item {
     Weapon {
         name: String,
-        heft: u8,
         modes: Vec<Mode>,
         description: String,
     },
@@ -257,7 +262,7 @@ impl Item {
     pub fn modes(&self) -> Vec<Mode> {
         match self {
             Item::Weapon { modes, .. } => modes.clone(),
-            _ => Vec::new()
+            _ => Vec::new(),
         }
     }
 }
@@ -274,11 +279,12 @@ impl Deref for Inventory {
 }
 
 impl Inventory {
-    pub fn ammo(&self) -> Option<Item> {
+    pub fn ammo(&self) -> Vec<Item> {
         // TODO: select a type of ammo from options
         self.iter()
-            .find(|x| matches!(x, Item::Ammo { .. }))
+            .filter(|x| matches!(x, Item::Ammo { .. }))
             .cloned()
+            .collect()
     }
 
     pub fn protection(&self, location: Location, aspect: Aspect) -> i8 {
@@ -440,21 +446,27 @@ enum Rigidity {
     Plate,
 }
 
-#[derive(clap::ValueEnum, Clone, Copy)]
+#[derive(clap::ValueEnum, Debug, Clone, Copy, EnumIter)]
 pub enum DefenseOption {
     Block,
     Dodge,
     Counterstrike,
 }
 
+impl Display for DefenseOption {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        write!(f, "{self:?}")
+    }
+}
+
 impl DefenseOption {
     pub fn test(self, being: &Being, mode: Mode, def_mod: i8, reach_penalty: i8) -> SuccessResult {
-        let basic_mod = mode.defense_mod() + being.heft_mod().unwrap_or(0) + def_mod;
+        let basic_mod = (mode.defense_mod() + being.heft_mod(mode).unwrap_or(0) + def_mod).into();
         match self {
             DefenseOption::Block => being.success_test(&Skill::Melee, basic_mod),
             DefenseOption::Dodge => being.success_test(&Skill::Dodge, basic_mod),
             DefenseOption::Counterstrike => {
-                being.success_test(&Skill::Melee, basic_mod - reach_penalty)
+                being.success_test(&Skill::Melee, basic_mod - reach_penalty as i32)
             }
         }
     }

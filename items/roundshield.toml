@@ -1,0 +1,16 @@
+[Weapon]
+name = "Roundshield"
+description = "A medium shield that, along with a sturdy helm, is the core element of defence."
+
+[[Weapon.modes]]
+
+[Weapon.modes.Melee]
+length = 1
+heft = 10
+thrust = false
+two_hand = false
+aspect = "Blunt"
+zone_die = 6
+impact_die = 6
+impact_mod = 1
+defense_mod = 10

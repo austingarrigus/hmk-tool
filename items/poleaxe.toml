@@ -1,0 +1,42 @@
+[Weapon]
+name = "Poleaxe"
+description = "A weapon similar in length to the spear, but with three primary modes: an axe head used for chopping strikes (top row); opposite this, a hammer head for bludgeoning (middle row); and, extending from the end of the shaft, a top spike for thrusting (bottom row). There can be a spike from the other, bottom end, too."
+
+[[Weapon.modes]]
+
+[Weapon.modes.Melee]
+length = 6
+heft = 18
+thrust = false
+two_hand = false
+aspect = "Edge"
+zone_die = 6
+impact_die = 8
+impact_mod = 7
+defense_mod = -10
+
+[[Weapon.modes]]
+
+[Weapon.modes.Melee]
+length = 6
+heft = 18
+thrust = false
+two_hand = false
+aspect = "Blunt"
+zone_die = 6
+impact_die = 6
+impact_mod = 5
+defense_mod = -10
+
+[[Weapon.modes]]
+
+[Weapon.modes.Melee]
+length = 6
+heft = 18
+thrust = true
+two_hand = false
+aspect = "Point"
+zone_die = 8
+impact_die = 8
+impact_mod = 4
+defense_mod = 0

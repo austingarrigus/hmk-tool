@@ -1,0 +1,16 @@
+[Weapon]
+name = "Falchion"
+description = "The design of the falchion's blade calls for chopping strikes. It shares elements of a sword's control, but with its weight centred further out on the blade, the falchion imparts a higher effective heft than a broadsword of similar weight."
+
+[[Weapon.modes]]
+
+[Weapon.modes.Melee]
+length = 4
+heft = 12
+thrust = false
+two_hand = false
+aspect = "Edge"
+zone_die = 6
+impact_die = 8
+impact_mod = 4
+defense_mod = 0

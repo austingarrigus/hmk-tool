@@ -1,0 +1,29 @@
+[Weapon]
+name = "Bastard Sword"
+description = "(Knight's sword · Hand-and-a-half sword) A large sword that enables strong combatants to wield it readily either one-handed (lng 6) or two-handed (lng 5)."
+
+[[Weapon.modes]]
+
+[Weapon.modes.Melee]
+length = 5
+heft = 14
+thrust = false
+two_hand = false
+aspect = "Edge"
+zone_die = 6
+impact_die = 10
+impact_mod = 4
+defense_mod = 0
+
+[[Weapon.modes]]
+
+[Weapon.modes.Melee]
+length = 5
+heft = 14
+thrust = true
+two_hand = false
+aspect = "Point"
+zone_die = 6
+impact_die = 8
+impact_mod = 2
+defense_mod = 0

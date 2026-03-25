@@ -1,0 +1,5 @@
+[Armor]
+name = "Breeches"
+material = "Cloth"
+covers = ["Pelvis", "Thigh", "Knee"]
+description = "Short cloth leg coverings extending from the waist to just below the knee, the standard lower garment for working folk."

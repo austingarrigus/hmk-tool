@@ -1,0 +1,16 @@
+[Weapon]
+name = "Morningstar"
+description = "The heavy, usually two-handed club features short spikes that help better defeat armour and inflict lethal penetrating wounds."
+
+[[Weapon.modes]]
+
+[Weapon.modes.Melee]
+length = 5
+heft = 15
+thrust = false
+two_hand = false
+aspect = "Point"
+zone_die = 6
+impact_die = 8
+impact_mod = 4
+defense_mod = -10

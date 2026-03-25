@@ -39,53 +39,53 @@ body = [
 injuries = []
 
 [attributes]
-Perception = 14
-Eloquence = 13
-Comeliness = 11
-Empathy = 9
 Creativity = 10
+Eloquence = 13
+Will = 13
+Reasoning = 17
+Empathy = 9
+Strength = 9
+Agility = 11
+Perception = 14
+Dexterity = 8
+Comeliness = 11
 Aura = 15
 Endurance = 12
-Reasoning = 17
-Strength = 9
-Dexterity = 8
-Agility = 11
-Will = 13
 
 [skills]
-Folklore = 7
-Metalcraft = 1
+Woodworking = 1
+Dodge = 4
 Intrigue = 6
-Jumping = 3
-Initiative = 4
+Mathematics = 4
 Swimming = 1
-Stealth = 4
 Discourse = 5
 Melee = 4
-Woodworking = 1
-Awareness = 4
-Dodge = 4
 Physician = 7
 Climbing = 3
-Masonry = 1
-Shock = 4
+Initiative = 4
 Spirit = 6
-Throwing = 2
-Engineering = 4
-Mathematics = 4
-Survival = 3
-Archery = 1
+Masonry = 1
+Stealth = 4
 Animalcraft = 1
+Shock = 4
+Folklore = 7
+Archery = 1
+Awareness = 4
+Metalcraft = 1
+Throwing = 2
+Jumping = 3
+Engineering = 4
+Survival = 3
 
 [prime_hand.Weapon]
 name = "Dagger"
-heft = 4
 description = "A dagger"
 
 [[prime_hand.Weapon.modes]]
 
 [prime_hand.Weapon.modes.Melee]
 length = 3
+heft = 4
 thrust = true
 two_hand = false
 aspect = "Point"

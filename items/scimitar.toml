@@ -1,0 +1,29 @@
+[Weapon]
+name = "Scimitar"
+description = "While less routinely penetrative than the broadsword, the scimitar's curved blade enhances the slashing injuries produced from its strikes that do land well. Its tip is usually not extremely sharp."
+
+[[Weapon.modes]]
+
+[Weapon.modes.Melee]
+length = 5
+heft = 10
+thrust = false
+two_hand = false
+aspect = "Edge"
+zone_die = 6
+impact_die = 10
+impact_mod = 2
+defense_mod = 0
+
+[[Weapon.modes]]
+
+[Weapon.modes.Melee]
+length = 5
+heft = 10
+thrust = true
+two_hand = false
+aspect = "Point"
+zone_die = 6
+impact_die = 8
+impact_mod = 1
+defense_mod = 0

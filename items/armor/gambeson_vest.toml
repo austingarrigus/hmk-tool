@@ -1,8 +1,0 @@
-name = "Vest"
-material = "Gambeson"
-covers = [
-    "Neck",
-    "Thorax",
-    "Abdomen",
-]
-description = "A heavily padded vest of compressed linen extending to the neck, its thick layers designed to stop cutting blows and absorb the impact of bludgeoning strikes."

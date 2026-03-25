@@ -1,0 +1,16 @@
+[Weapon]
+name = "Hatchet"
+description = "(Small axe) A short tool used for cutting and splitting wood."
+
+[[Weapon.modes]]
+
+[Weapon.modes.Melee]
+length = 4
+heft = 10
+thrust = false
+two_hand = false
+aspect = "Edge"
+zone_die = 6
+impact_die = 8
+impact_mod = 4
+defense_mod = -5

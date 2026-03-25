@@ -5,10 +5,10 @@ use strum::EnumIter;
 
 #[derive(Debug, PartialEq, Eq, PartialOrd, Ord, Clone, Copy)]
 pub enum SuccessResult {
-    CriticalSuccess(u8),
-    Success(u8),
-    Fail(u8),
-    CriticalFail(u8),
+    CriticalSuccess(u32),
+    Success(u32),
+    Fail(u32),
+    CriticalFail(u32),
 }
 
 impl SuccessResult {
@@ -315,9 +315,9 @@ impl Testable for Attribute {
 }
 
 #[derive(Default, Debug, Serialize, Deserialize, Clone)]
-pub struct SkillSet(HashMap<Skill, u8>);
+pub struct SkillSet(pub HashMap<Skill, u8>);
 #[derive(Default, Debug, Serialize, Deserialize, Clone)]
-pub struct AttributeSet(HashMap<Attribute, u8>);
+pub struct AttributeSet(pub HashMap<Attribute, u8>);
 
 impl Deref for AttributeSet {
     type Target = HashMap<Attribute, u8>;
@@ -379,7 +379,7 @@ pub trait Testable: Display {
     fn index(&self, character: &being::Being) -> u8 {
         self.ml(character) / 10
     }
-    fn eml(&self, modifier: i8, character: &being::Being) -> u8 {
+    fn eml(&self, modifier: i32, character: &being::Being) -> u32 {
         let mut block = false;
         let imparement = character.injuries().iter().fold(0, |acc, x| {
             if self.impaired_by().contains(&x.location.zone()) {
@@ -398,7 +398,7 @@ pub trait Testable: Display {
         if block {
             return 0;
         }
-        let eml = self.ml(character).cast_signed() + modifier - imparement;
+        let eml = self.ml(character) as i32 + modifier - imparement;
         match eml {
             ..5 => 5,
             5..95 => eml.cast_unsigned(),

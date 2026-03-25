@@ -1,0 +1,13 @@
+[Armor]
+name = "Tunic"
+material = "Gambeson"
+covers = [
+    "Neck",
+    "Shoulder",
+    "UpperArm",
+    "Elbow",
+    "Thorax",
+    "Abdomen",
+    "Pelvis",
+]
+description = "A half-sleeved gambeson covering from neck to hips, the standard body armor of men-at-arms who cannot afford mail."

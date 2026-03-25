@@ -1,0 +1,16 @@
+[Weapon]
+name = "Whip"
+description = "A tool for controlling animals—herders use the 8′–10′ one shown here to guide their flocks. Teamsters employ a shorter 4′–5′ drover's whip to drive wagon teams (hft 8 • lng 4 • zd d6 • 1 lb • 6d • remove long trait). The Reksyni Isagara has wire-reinforced tips (wq 10 • hft 10 • d8+1e • impact ta 4e • 3 lb • 24d)."
+
+[[Weapon.modes]]
+
+[Weapon.modes.Melee]
+length = 8
+heft = 9
+thrust = false
+two_hand = false
+aspect = "Edge"
+zone_die = 8
+impact_die = 6
+impact_mod = 0
+defense_mod = -20

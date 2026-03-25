@@ -1,0 +1,16 @@
+[Weapon]
+name = "Sickle"
+description = "(Reap hook) An agricultural tool used for harvesting, reaping, and cutting. The curving blade in the style shown here helps catch and slice crops at the same time."
+
+[[Weapon.modes]]
+
+[Weapon.modes.Melee]
+length = 3
+heft = 9
+thrust = false
+two_hand = false
+aspect = "Edge"
+zone_die = 6
+impact_die = 10
+impact_mod = 2
+defense_mod = -5

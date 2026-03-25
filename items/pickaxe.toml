@@ -1,0 +1,16 @@
+[Weapon]
+name = "Pickaxe"
+description = "(Mattock) A tool with a spiked head to break up rock and hard soil; its opposite flat head is for prying. While unwieldy as a weapon, a pickaxe punctures heavy armour by concentrating its swung momentum into a narrow point."
+
+[[Weapon.modes]]
+
+[Weapon.modes.Melee]
+length = 5
+heft = 18
+thrust = false
+two_hand = false
+aspect = "Point"
+zone_die = 6
+impact_die = 8
+impact_mod = 5
+defense_mod = -15

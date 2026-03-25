@@ -1,0 +1,16 @@
+[Weapon]
+name = "Buckler"
+description = "A small, light shield wielded in the fist with the arm extended. A buckler is carried when larger shields would be too cumbersome or militant-looking."
+
+[[Weapon.modes]]
+
+[Weapon.modes.Melee]
+length = 1
+heft = 8
+thrust = false
+two_hand = false
+aspect = "Blunt"
+zone_die = 6
+impact_die = 6
+impact_mod = 0
+defense_mod = 5
