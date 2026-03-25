@@ -5,6 +5,8 @@ mod being;
 mod core;
 mod item;
 
+use std::path::PathBuf;
+
 use anyhow_serde::{Context, Result};
 use clap::{Parser, Subcommand};
 use inquire::Select;
@@ -66,6 +68,11 @@ enum Commands {
 
     Sheet {
         name: String,
+    },
+
+    Equip {
+        name: PathBuf,
+        items: Vec<PathBuf>,
     },
 
     Initiative {
@@ -159,6 +166,14 @@ fn main() -> Result<()> {
             let name = name.to_lowercase();
             let c = being::Being::read_sheet(&name)?;
             println!("{c}");
+        }
+
+        Commands::Equip { name, items } => {
+            let mut c = being::Being::read_sheet(&name)?;
+            for i in items {
+                c.equip(item::Item::from_file(i)?);
+            }
+            c.write_sheet(name)?;
         }
         Commands::Initiative { names } => {
             names
