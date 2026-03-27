@@ -19,9 +19,12 @@ Many more features are planned, such as character creation.
 
 While the code itself was written in a way to allow for more complex tests, such as adding modifiers to rolls, selecting specific weapons, or choosing how Tactical Advantages are used, these features aren't implemented in the CLI yet.
 
+# Usage
+The most basic
+
 # Character Sheet Format
-The character sheets are encoded in [MessagePack](https://msgpack.org/index.html) to allow for complex skill keys such as `Language("Hârnic")`, which is not possible in most (easily) human readable formats.
-The tool is capable of reading toml files, but currently there is no interface to access this functionality for player characters.
+The basic format for character sheets uses TOML.
+In the future, I'll have a way to also read character sheets that are encoded in [MessagePack](https://msgpack.org/index.html) to allow for complex skill keys such as `Language("Hârnic")`, which is not possible in most (easily) human readable formats.
 
 The premade characters from the free "On the Silver Way" module are included.
 

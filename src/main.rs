@@ -169,7 +169,7 @@ fn main() -> Result<()> {
                     let c = being::Being::read_sheet(name).unwrap();
                     (
                         c.name().clone(),
-                        c.ml(Skill::Initiative),
+                        c.ml(&Skill::Initiative),
                         if let Some(shock) = c.shock {
                             format!("{shock:?}")
                         } else {

@@ -514,7 +514,7 @@ impl Being {
             Some(o)
         } else {
             match skill {
-                Skill::Initiative | Skill::Shock | Skill::Melee | Skill::Dodge => Some(50),
+                Skill::Initiative | Skill::Shock | Skill::Melee | Skill::Dodge => Some(5),
                 _ => None,
             }
         }
@@ -579,10 +579,11 @@ impl Being {
         result
     }
 
-    pub fn ml(&self, test: impl Testable) -> u8 {
+    pub fn ml(&self, test: &impl Testable) -> u8 {
         test.ml(self)
     }
-    pub fn eml(&self, test: impl Testable) -> u32 {
+
+    pub fn eml(&self, test: &impl Testable) -> u32 {
         test.eml(0, self)
     }
 
