@@ -20,7 +20,7 @@ Many more features are planned, such as character creation.
 While the code itself was written in a way to allow for more complex tests, such as adding modifiers to rolls, selecting specific weapons, or choosing how Tactical Advantages are used, these features aren't implemented in the CLI yet.
 
 # Usage
-The most basic
+Tests are fairly quick
 
 # Character Sheet Format
 The basic format for character sheets uses TOML.
@@ -37,3 +37,6 @@ cargo install --path .
 ```
 
 Currently, the tool relies on a specific directory structure to work, so I'd recommend just running it from the project directory.
+
+
+This is unofficial Hârn fan material. Hârn®, HârnWorld®, and HârnMaster® are registered trademarks of Arien Crossby, licensed by Keléstia Productions Ltd (www.kelestia.com). All related concepts and material are the property of Arien Crossby and Keléstia Productions Ltd (www.kelestia.com). Used with permission.
