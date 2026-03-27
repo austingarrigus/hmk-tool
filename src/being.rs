@@ -736,7 +736,12 @@ impl Being {
                     target.name(),
                     atk_mode,
                 );
-                if range > length.into() {
+                if range
+                    > match length.into() {
+                        ..5 => 5,
+                        _ => length.into(),
+                    }
+                {
                     eprintln!("Out of range!");
                     return None;
                 }

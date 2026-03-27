@@ -14,7 +14,6 @@ use itertools::Itertools;
 use strum::IntoEnumIterator;
 
 use crate::{
-    being::BodyType,
     core::{Skill, SkillSet},
     item::{DefenseOption, Inventory, Mode},
 };
@@ -23,7 +22,7 @@ use crate::{
 #[command(version, about)]
 struct Cli {
     #[command(subcommand)]
-    command: Option<Commands>,
+    command: Commands,
 }
 
 #[derive(Subcommand)]
@@ -31,14 +30,12 @@ enum Commands {
     CreateNpc {
         name: String,
     },
-
     FullHeal {
-        name: String,
+        name: PathBuf,
     },
-
     Attack {
-        attacker: String,
-        target: String,
+        attacker: PathBuf,
+        target: PathBuf,
         #[arg(default_value_t = 5)]
         range: u16,
         #[arg(long, short = 'z', default_value_t = 1)]
@@ -48,47 +45,45 @@ enum Commands {
         #[arg(long, short, default_value_t = 0)]
         defense_modifier: i8,
     },
-
     Test {
+        name: PathBuf,
         skill: core::Skill,
-        name: String,
     },
-
     OpposedTest {
+        lhs_character: PathBuf,
         lhs_skill: core::Skill,
-        lhs_character: String,
+        rhs_character: PathBuf,
         rhs_skill: core::Skill,
-        rhs_character: String,
     },
-
     ValueTest {
+        name: PathBuf,
         skill: core::Skill,
-        name: String,
     },
-
     Sheet {
-        name: String,
+        name: PathBuf,
     },
-
     Equip {
         name: PathBuf,
         items: Vec<PathBuf>,
     },
-
     Initiative {
-        names: Vec<String>,
+        names: Vec<PathBuf>,
+    },
+    ModifySkill {
+        name: PathBuf,
+        skill: Skill,
+        value: i16,
     },
 }
 
 fn main() -> Result<()> {
-    let command = Cli::parse().command.context("No subcommand")?;
-    match command {
+    let cli = Cli::parse();
+    match cli.command {
         Commands::CreateNpc { name } => {
-            let npc = being::Being::read_sheet(format!("beastiary/{name}.toml"))?;
+            let npc = being::Being::read_sheet(format!("beastiary/{}.toml", name))?;
             npc.write_sheet(name)?;
         }
         Commands::FullHeal { name } => {
-            let name = name.to_lowercase();
             let mut c = being::Being::read_sheet(&name)?;
             c.injuries = Vec::new();
             c.shock = None;
@@ -103,8 +98,6 @@ fn main() -> Result<()> {
             defense_modifier,
             ..
         } => {
-            let attacker = attacker.to_lowercase();
-            let target = target.to_lowercase();
             let mut a = being::Being::read_sheet(&attacker)?;
             let mut t = being::Being::read_sheet(&target)?;
             let atk_mode = Select::new("Select attack mode", a.modes()).prompt()?;
@@ -138,8 +131,7 @@ fn main() -> Result<()> {
             t.write_sheet(target)?;
         }
         Commands::Test { skill, name } => {
-            let name = name.to_lowercase();
-            let c = being::Being::read_sheet(&name)?;
+            let c = being::Being::read_sheet(name)?;
             println!("{:?}", c.success_test(&skill, 0));
         }
         Commands::OpposedTest {
@@ -148,8 +140,6 @@ fn main() -> Result<()> {
             rhs_skill,
             rhs_character,
         } => {
-            let lhs_character = lhs_character.to_lowercase();
-            let rhs_character = rhs_character.to_lowercase();
             let l = being::Being::read_sheet(&lhs_character)?;
             let r = being::Being::read_sheet(&rhs_character)?;
             println!(
@@ -158,16 +148,13 @@ fn main() -> Result<()> {
             );
         }
         Commands::ValueTest { skill, name } => {
-            let name = name.to_lowercase();
             let c = being::Being::read_sheet(&name)?;
             println!("{:?}", c.value_test(&skill, 0));
         }
         Commands::Sheet { name } => {
-            let name = name.to_lowercase();
             let c = being::Being::read_sheet(&name)?;
             println!("{c}");
         }
-
         Commands::Equip { name, items } => {
             let mut c = being::Being::read_sheet(&name)?;
             for i in items {
@@ -193,6 +180,11 @@ fn main() -> Result<()> {
                 .sorted_by_key(|x| x.1)
                 .rev()
                 .for_each(|x| println!("{:<10} {} {}", x.0, x.1, x.2));
+        }
+        Commands::ModifySkill { name, skill, value } => {
+            let mut c = being::Being::read_sheet(&name)?;
+            c.skills.modify(skill, value);
+            c.write_sheet(name)?;
         }
     }
     Ok(())

@@ -355,18 +355,17 @@ impl Display for SkillSet {
 }
 
 impl SkillSet {
-    fn learn(&mut self, skill: Skill) {
-        if let Some(level) = self.0.insert(skill.clone(), 1) {
-            self.0.insert(skill, level + 1);
-        }
-    }
-
-    fn unlearn(&mut self, skill: Skill) {
-        if let Some(level) = self.0.get(&skill) {
-            if *level == 1 {
+    pub fn modify(&mut self, skill: Skill, value: i16) {
+        if let Some(level) = self.0.insert(
+            skill.clone(),
+            value.try_into().expect("value must be non-negative"),
+        ) {
+            let new = i16::from(level).saturating_add(value);
+            if new < 1 {
                 self.0.remove(&skill);
             } else {
-                self.0.insert(skill, level - 1);
+                self.0
+                    .insert(skill, new.try_into().expect("already checked for < 0"));
             }
         }
     }
@@ -398,7 +397,7 @@ pub trait Testable: Display {
         if block {
             return 0;
         }
-        let eml = self.ml(character) as i32 + modifier - imparement;
+        let eml = i32::from(self.ml(character)) + modifier - imparement;
         match eml {
             ..5 => 5,
             5..95 => eml.cast_unsigned(),

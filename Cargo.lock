@@ -307,7 +307,6 @@ dependencies = [
  "itertools",
  "json5",
  "rand",
- "rmp",
  "rmp-serde",
  "serde",
  "serde_json",

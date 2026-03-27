@@ -27,26 +27,27 @@ body = [
 ],
 ],
 ]
+injuries = []
 
 [attributes]
-Reasoning = 10
-Strength = 10
-Dexterity = 13
 Creativity = 10
+Strength = 10
 Eloquence = 10
+Dexterity = 13
 Will = 10
-Agility = 10
-Endurance = 10
 Perception = 13
-Aura = 9
+Reasoning = 10
+Endurance = 10
 Empathy = 6
+Agility = 10
+Aura = 9
 
 [skills]
-Herblore = 8
-Dodge = 5
 Shock = 5
+Dodge = 5
 Fletching = 4
 Melee = 5
+Herblore = 8
 
 [prime_hand.Weapon]
 name = "Mankar"
@@ -159,27 +160,3 @@ covers = [
     "Foot",
 ]
 description = "All Gargun have natural fur 2•2•1•2"
-
-[[injuries]]
-location = "Pelvis"
-shock = 1
-aspect = "Point"
-bleed = false
-
-[[injuries]]
-location = "Abdomen"
-shock = 2
-aspect = "Point"
-bleed = false
-
-[[injuries]]
-location = "Pelvis"
-shock = 2
-aspect = "Point"
-bleed = false
-
-[[injuries]]
-location = "Pelvis"
-shock = 1
-aspect = "Point"
-bleed = false

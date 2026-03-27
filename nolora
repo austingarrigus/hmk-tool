@@ -39,42 +39,42 @@ body = [
 injuries = []
 
 [attributes]
-Strength = 12
-Dexterity = 14
-Reasoning = 13
-Eloquence = 10
 Agility = 12
-Endurance = 15
+Eloquence = 10
+Empathy = 14
 Will = 16
+Comeliness = 11
+Endurance = 15
+Reasoning = 13
 Aura = 8
 Creativity = 11
-Comeliness = 11
-Empathy = 14
+Dexterity = 14
 Perception = 14
+Strength = 12
 
 [skills]
-Shock = 5
-Folklore = 1
-Fletching = 3
+Throwing = 2
 Spirit = 5
-Swimming = 2
 Archery = 6
-Herblore = 2
-Woodworking = 2
-Stealth = 5
+Jumping = 3
+Tracking = 7
+Fletching = 3
+Survival = 6
+Swimming = 2
 Physician = 1
+Hideworking = 3
+Shock = 5
+Timbercraft = 2
+Charm = 3
+Folklore = 1
+Intrigue = 3
+Woodworking = 2
+Herblore = 2
+Stealth = 5
+Dodge = 6
 Initiative = 5
 Awareness = 5
 Climbing = 3
-Dodge = 6
-Timbercraft = 2
-Survival = 6
-Throwing = 2
-Intrigue = 3
-Hideworking = 3
-Jumping = 3
-Tracking = 7
-Charm = 3
 Melee = 6
 
 [prime_hand.Weapon]
